@@ -41,13 +41,15 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 1. <a name="whitespace">Whitespace</a>
   - Never mix spaces and tabs.
-  - When beginning a project, before you write any code, choose between soft indents (spaces) or real tabs, consider this **law**.
-      - For readability, I always recommend setting your editor's indent size to two characters &mdash; this means two spaces or two spaces representing a real tab.
-  - If your editor supports it, always work with the "show invisibles" setting turned on. The benefits of this practice are:
+  - Always use real tabs instead of spaces. This allows other developers to set a tab width of their choice.
+  - If your editor supports it, always work with the "show invisibles" setting turned on. In Sublime Text, this can be achieved by adding `"draw_white_space": "all"` to your User Preferences file. The benefits of this practice are:
       - Enforced consistency
       - Eliminating end of line whitespace
       - Eliminating blank line whitespace
       - Commits and diffs that are easier to read
+
+Tip: use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to
+help maintain basic whitespace conventions.
 
 
 2. <a name="spacing">Beautiful Syntax</a>
