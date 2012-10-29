@@ -1,122 +1,105 @@
 # Deloitte Digital's JavaScript Styleguide
 
-This styleguide has been forked from Rick Waldron's
-[Idiomatic JavaScript](https://github.com/rwldrn/idiomatic.js) project.
-It is temporarily hosted on Keegan Street's Github account but will
-be transferred to Deloitte's account.
-
-This is a living document and new ideas are always welcome. Please
-contribute.
+This styleguide has been forked from Rick Waldron's [Idiomatic JavaScript](https://github.com/rwldrn/idiomatic.js) project. This is a living document and new ideas are always welcome. Please contribute.
 
 
 ## Table of Contents
 
- * [Whitespace](#whitespace)
- * [Beautiful Syntax](#spacing)
- * [Type Checking (Courtesy jQuery Core Style Guidelines)](#type)
- * [Conditional Evaluation](#cond)
- * [Practical Style](#practical)
- * [Naming](#naming)
- * [Misc](#misc)
- * [Native & Host Objects](#native)
- * [Comments](#comments)
- * [One Language Code](#language)
- * [Other important stuff](#important)
- * [Acknowledgements](#acknowledgements)
- * [License](#license)
-
-
-
-------------------------------------------------
-
-
-## Preface
-
-The following sections outline a _reasonable_ style guide for modern JavaScript development and are not meant to be prescriptive. The most important take-away is the **law of code style consistency**. Whatever you choose as the style for your project should be considered law. Link to this document as a statement of your project's commitment to code style consistency, readability and maintainability.
-
+* [Whitespace](#whitespace)
+* [Beautiful Syntax](#spacing)
+* [Type Checking (Courtesy jQuery Core Style Guidelines)](#type)
+* [Conditional Evaluation](#cond)
+* [Practical Style](#practical)
+* [Naming](#naming)
+* [Misc](#misc)
+* [Native & Host Objects](#native)
+* [Comments](#comments)
+* [One Language Code](#language)
+* [Other important stuff](#important)
+* [Acknowledgements](#acknowledgements)
+* [License](#license)
 
 
 ## Idiomatic Style Manifesto
 
 
-1. <a name="whitespace">Whitespace</a>
-  - Never mix spaces and tabs.
-  - Always use real tabs instead of spaces. This allows other developers to set a tab width of their choice.
-  - If your editor supports it, always work with the "show invisibles" setting turned on. In Sublime Text, this can be achieved by adding `"draw_white_space": "all"` to your User Preferences file. The benefits of this practice are:
-      - Enforced consistency
-      - Eliminating end of line whitespace
-      - Eliminating blank line whitespace
-      - Commits and diffs that are easier to read
+## Whitespace
+- Never mix spaces and tabs.
+- Always use real tabs instead of spaces. This allows other developers to set a tab width of their choice.
+- If your editor supports it, always work with the "show invisibles" setting turned on. In Sublime Text, this can be achieved by adding `"draw_white_space": "all"` to your User Preferences file. The benefits of this practice are:
+ - Enforced consistency
+ - Eliminating end of line whitespace
+ - Eliminating blank line whitespace
+ - Commits and diffs that are easier to read
 
-Tip: use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to
-help maintain basic whitespace conventions.
-
-
-2. <a name="spacing">Beautiful Syntax</a>
-
-    A. Parens, Braces, Linebreaks
-
-    ```javascript
-
-    // if/else/for/while/try always have spaces, braces and span multiple lines
-    // this encourages readability
-
-    // 2.A.1.1
-    // Examples of really cramped syntax
-
-    if(condition) doSomething();
-
-    while(condition) iterating++;
-
-    for(var i=0;i<100;i++) someIterativeFn();
+Tip: use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to help maintain the basic whitespace conventions that have been agreed for your code-base. This has been added to the Deloitte Middleman template.
 
 
-    // 2.A.1.1
-    // Use whitespace to promote readability
+## Beautiful Syntax
 
-    if ( condition ) {
-      // statements
-    }
+### A. Parens, Braces, Linebreaks
 
-    while ( condition ) {
-      // statements
-    }
+```javascript
 
-    for ( var i = 0; i < 100; i++ ) {
-      // statements
-    }
+// if/else/for/while/try always have spaces, braces and span multiple lines
+// this encourages readability
 
-    // Even better:
+// 2.A.1.1
+// Examples of really cramped syntax
 
-    var i,
-      length = 100;
+if(condition) doSomething();
 
-    for ( i = 0; i < length; i++ ) {
-      // statements
-    }
+while(condition) iterating++;
 
-    // Or...
-
-    var i = 0,
-      length = 100;
-
-    for ( ; i < length; i++ ) {
-      // statements
-    }
-
-    var prop;
-
-    for ( prop in object ) {
-      // statements
-    }
+for(var i=0;i<100;i++) someIterativeFn();
 
 
-    if ( true ) {
-      // statements
-    } else {
-      // statements
-    }
-    ```
+// 2.A.1.1
+// Use whitespace to promote readability
+
+if ( condition ) {
+  // statements
+}
+
+while ( condition ) {
+  // statements
+}
+
+for ( var i = 0; i < 100; i++ ) {
+  // statements
+}
+
+// Even better:
+
+var i,
+  length = 100;
+
+for ( i = 0; i < length; i++ ) {
+  // statements
+}
+
+// Or...
+
+var i = 0,
+  length = 100;
+
+for ( ; i < length; i++ ) {
+  // statements
+}
+
+var prop;
+
+for ( prop in object ) {
+  // statements
+}
+
+
+if ( true ) {
+  // statements
+} else {
+  // statements
+}
+```
 
 
     B. Assignments, Declarations, Functions ( Named, Expression, Constructor )
