@@ -755,7 +755,7 @@ help maintain basic whitespace conventions.
 
 
 
-    A. You are not a human code compiler/compressor, so don't try to be one.
+    A. You are not a human code compiler/compressor, so don't try to be one. Use long descriptive variable names.
 
     The following code is an example of egregious naming:
 
@@ -812,6 +812,13 @@ help maintain basic whitespace conventions.
 
 
     // 6.A.3.3
+    // Naming booleans
+
+    `hasFocus` is clearly a boolean. `focus` is ambigious.
+    `isEnabled` is a clearly a boolean
+
+
+    // 6.A.3.3
     // Naming functions, objects, instances, etc
 
     camelCase; function and var declarations
@@ -835,9 +842,12 @@ help maintain basic whitespace conventions.
     functionNamesLikeThis;
     variableNamesLikeThis;
     ConstructorNamesLikeThis;
-    EnumNamesLikeThis;
-    methodNamesLikeThis;
     SYMBOLIC_CONSTANTS_LIKE_THIS;
+
+    // 6.A.3.7
+    // Global variables.
+    // Use all caps to indicate that you intended to use a global var.
+    var DDIGITAL = {};
 
     ```
 
