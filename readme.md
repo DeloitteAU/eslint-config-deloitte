@@ -5,21 +5,33 @@ This styleguide has been forked from Rick Waldron's [Idiomatic JavaScript](https
 
 ## Table of Contents
 
-1. Whitespace
-2. Beautiful Syntax
-3. Practical Style
-4. Naming
-5. Misc
-6. Comments
-7. Code Quality Tools, Resources & References
-8. Get Smart
-9. Build & Deployment Process
-10. License
+1. General principles
+2. Whitespace
+3. Beautiful Syntax
+4. Practical Style
+5. Naming
+6. Misc
+7. Comments
+8. Code Quality Tools, Resources & References
+9. Get Smart
+10. Build & Deployment Process
+11. License
 
 
-## Whitespace
-* Never mix spaces and tabs.
-* Always use real tabs instead of spaces. This allows other developers to set a tab width of their choice.
+## 1. General principles
+
+> "Part of being a good steward to a successful project is realizing that writing code for yourself is a Bad Idea™. If thousands of people are using your code, then write your code for maximum clarity, not your personal preference of how to get clever within the spec." - Idan Gazit
+
+* You are not a human code compiler/compressor, so don't try to be one.
+* All code in any code-base should look like a single person typed it, no matter how many people contributed.
+* Strictly enforce the agreed upon style.
+* If in doubt when deciding upon a style, use existing, common patterns.
+
+
+## 2. Whitespace
+
+* _Never_ mix spaces and tabs for indentation.
+* Real tabs are preferred over spaces. This allows other developers to set a tab width of their choice.
 * If your editor supports it, always work with the "show invisibles" setting turned on. In Sublime Text, this can be achieved by adding `"draw_white_space": "all"` to your User Preferences file. The benefits of this practice are:
 	* Enforced consistency
 	* Eliminating end of line whitespace
@@ -29,7 +41,7 @@ This styleguide has been forked from Rick Waldron's [Idiomatic JavaScript](https
 Tip: use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to help maintain the basic whitespace conventions that have been agreed for your code-base. This has been added to the Deloitte Middleman template.
 
 
-## Beautiful Syntax
+## 3. Beautiful Syntax
 
 ### A. Parens, Braces, Linebreaks
 
@@ -38,7 +50,7 @@ Tip: use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to hel
 // if/else/for/while/try always have spaces, braces and span multiple lines
 // this encourages readability
 
-// 2.A.1.1
+// 3.A.1.1
 // Examples of really cramped syntax
 
 if(condition) doSomething();
@@ -48,7 +60,7 @@ while(condition) iterating++;
 for(var i=0;i<100;i++) someIterativeFn();
 
 
-// 2.A.1.1
+// 3.A.1.1
 // Use whitespace to promote readability
 
 if ( condition ) {
@@ -101,7 +113,7 @@ if ( true ) {
 
 ```javascript
 
-// 2.B.1.1
+// 3.B.1.1
 // Variables
 var foo = 'bar',
 	num = 1,
@@ -112,7 +124,7 @@ var array = [],
 	object = {};
 
 
-// 2.B.1.2
+// 3.B.1.2
 // Using only one `var` per scope (function) promotes readability
 // and keeps your declaration list free of clutter (also saves a few keystrokes)
 
@@ -132,7 +144,7 @@ foo = '',
 bar = '',
 quux;
 
-// 2.B.1.3
+// 3.B.1.3
 // var statements should always be in the beginning of their respective scope (function).
 // Same goes for const and let from ECMAScript 6.
 
@@ -157,7 +169,7 @@ function foo() {
 
 ```javascript
 
-// 2.B.2.1
+// 3.B.2.1
 // Named Function Declaration
 function foo( arg1, argN ) {
 
@@ -167,7 +179,7 @@ function foo( arg1, argN ) {
 foo( arg1, argN );
 
 
-// 2.B.2.2
+// 3.B.2.2
 // Named Function Declaration
 function square( number ) {
 	return number * number;
@@ -186,7 +198,7 @@ square( 10, function( square ) {
 });
 
 
-// 2.B.2.3
+// 3.B.2.3
 // Function Expression
 var square = function( number ) {
 	// Return something valuable and relevant
@@ -205,7 +217,7 @@ var factorial = function factorial( number ) {
 };
 
 
-// 2.B.2.4
+// 3.B.2.4
 // Constructor Declaration
 function FooBar( options ) {
 
@@ -225,7 +237,7 @@ fooBar.options;
 
 ```javascript
 
-// 2.C.1.1
+// 3.C.1.1
 // Functions with callbacks
 foo(function() {
 	// Note there is no extra space between the first paren
@@ -235,7 +247,7 @@ foo(function() {
 // Function accepting an array, no space
 foo([ 'alpha', 'beta' ]);
 
-// 2.C.1.2
+// 3.C.1.2
 // Function accepting an object, no space
 foo({
 	a: 'alpha',
@@ -255,11 +267,11 @@ if ( !('foo' in obj) ) {
 
 ### D. Consistency Always Wins
 
-In sections 2.A-2.C, the whitespace rules are set forth as a recommendation with a simpler, higher purpose: consistency. It's important to note that formatting preferences, such as "inner whitespace" should be considered optional, but only one style should exist across the entire source of your project.
+In sections 3.A-3.C, the whitespace rules are set forth as a recommendation with a simpler, higher purpose: consistency. It's important to note that formatting preferences, such as "inner whitespace" should be considered optional, but only one style should exist across the entire source of your project.
 
 ```javascript
 
-// 2.D.1.1
+// 3.D.1.1
 
 if (condition) {
 	// statements
@@ -296,11 +308,11 @@ var dog = '<div class="dog"></div>';
 Whitespace can ruin diffs and make changesets impossible to read. Use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to strip the whitespace from the ends of lines. This has been added to the Deloitte Middleman template.
 
 
-## 3. Practical Style
+## 4. Practical Style
 
 ```javascript
 
-// 3.1.1
+// 4.1.1
 // A Practical Module
 
 (function( global ) {
@@ -341,7 +353,7 @@ Whitespace can ruin diffs and make changesets impossible to read. Use an [Editor
 
 ```javascript
 
-// 3.2.1
+// 4.2.1
 // A Practical Constructor
 
 (function( global ) {
@@ -376,7 +388,7 @@ Whitespace can ruin diffs and make changesets impossible to read. Use an [Editor
 ```
 
 
-## 4. Naming
+## 5. Naming
 
 ### A. You are not a human code compiler/compressor, so don't try to be one. Use long descriptive variable names.
 
@@ -384,7 +396,7 @@ The following code is an example of egregious naming:
 
 ```javascript
 
-// 4.A.1.1
+// 5.A.1.1
 // Example of code with poor names
 
 function q(s) {
@@ -401,7 +413,7 @@ Here's the same piece of logic, but with kinder, more thoughtful naming (and a r
 
 ```javascript
 
-// 4.A.2.1
+// 5.A.2.1
 // Example of code with improved names
 
 function query( selector ) {
@@ -423,44 +435,44 @@ A few additional naming pointers:
 
 ```javascript
 
-// 4.A.3.1
+// 5.A.3.1
 // Naming strings
 
 `dog` is a string
 
 
-// 4.A.3.2
+// 5.A.3.2
 // Naming arrays
 
 `dogs` is an array of `dog` strings
 
 
-// 4.A.3.3
+// 5.A.3.3
 // Naming booleans
 
 `hasFocus` is clearly a boolean. `focus` is ambigious.
 `isEnabled` is a clearly a boolean
 
 
-// 4.A.3.3
+// 5.A.3.3
 // Naming functions, objects, instances, etc
 
 camelCase; function and var declarations
 
 
-// 4.A.3.4
+// 5.A.3.4
 // Naming constructors, prototypes, etc.
 
 PascalCase; constructor function
 
 
-// 4.A.3.5
+// 5.A.3.5
 // Naming regular expressions
 
 rDesc = //;
 
 
-// 4.A.3.6
+// 5.A.3.6
 // From the Google Closure Library Style Guide
 
 functionNamesLikeThis;
@@ -468,7 +480,7 @@ variableNamesLikeThis;
 ConstructorNamesLikeThis;
 SYMBOLIC_CONSTANTS_LIKE_THIS;
 
-// 4.A.3.7
+// 5.A.3.7
 // Global variables.
 // Use all caps to indicate that you intended to use a global var.
 var DDIGITAL = {};
@@ -476,7 +488,7 @@ var DDIGITAL = {};
 ```
 
 
-## 5. Misc
+## 6. Misc
 
 This section will serve to illustrate ideas and concepts that should not be considered dogma, but instead exists to encourage questioning practices in an attempt to find better ways to do common JavaScript programming tasks.
 
@@ -490,7 +502,7 @@ https://github.com/rwldrn/idiomatic.js/issues/13
 
 ```javascript
 
-// 5.A.1.1
+// 6.A.1.1
 // An example switch statement
 
 switch( foo ) {
@@ -505,7 +517,7 @@ switch( foo ) {
 		break;
 }
 
-// 5.A.1.2
+// 6.A.1.2
 // A alternate approach that supports composability and reusability is to
 // use an object to store "cases" and a function to delegate:
 
@@ -552,8 +564,8 @@ delegator = function() {
 	return delegate.apply( null, args );
 };
 
-// 5.A.1.3
-// Put the API in 5.A.1.2 to work:
+// 6.A.1.3
+// Put the API in 6.A.1.2 to work:
 
 delegator( 'alpha', 1, 2, 3, 4, 5 );
 // [ 'Alpha', 5 ]
@@ -592,7 +604,7 @@ delegator();
 
 ```javascript
 
-// 5.B.1.1
+// 6.B.1.1
 // Bad:
 function returnLate( foo ) {
 	var ret;
@@ -618,47 +630,50 @@ function returnEarly( foo ) {
 ```
 
 
-## 6. Comments
+## 7. Comments
 
-* Single line above the code that is subject
-* Multiline is good
-* End of line comments are prohibited!
-* JSDoc style is good, but requires a significant time investment
+Well commented code is extremely important. Take time to describe components, how they work, their limitations, and the way they are constructed. Don't leave others in the team guessing as to the purpose of uncommon or non-obvious code.
 
-
-## 7. Code Quality Tools, Resources & References
-
- * [JavaScript Plugin](http://docs.codehaus.org/display/SONAR/JavaScript+Plugin) for [Sonar](http://www.sonarsource.org/)
- * [jsPerf](http://jsperf.com/)
- * [jsFiddle](http://jsfiddle.net/)
- * [jsbin](http://jsbin.com/)
- * [JavaScript Lint (JSL)](http://javascriptlint.com/)
- * [jshint](http://jshint.com/)
- * [jslint](http://jslint.org/)
+* Comment style should be simple and consistent within a single code base.
+* Place comments on a new line above their subject.
+* Avoid end of line comments.
+* Keep line-length to a sensible maximum, e.g., 80 columns.
+* Use "sentence case" comments and consistent text indentation.
+* JSDoc style is good, but requires a significant time investment.
 
 
-## 8. Get Smart
+## 8. Code Quality Tools, Resources & References
 
-### [Annotated ECMAScript 5.1](http://es5.github.com/)
-### [EcmaScript Language Specification, 5.1 Edition](http://ecma-international.org/ecma-262/5.1/)
+* [JavaScript Plugin](http://docs.codehaus.org/display/SONAR/JavaScript+Plugin) for [Sonar](http://www.sonarsource.org/)
+* [jsPerf](http://jsperf.com/)
+* [jsFiddle](http://jsfiddle.net/)
+* [jsbin](http://jsbin.com/)
+* [jshint](http://jshint.com/)
+* [jslint](http://jslint.org/)
+
+
+## 9. Get Smart
+
+* [Annotated ECMAScript 5.1](http://es5.github.com/)
+* [EcmaScript Language Specification, 5.1 Edition](http://ecma-international.org/ecma-262/5.1/)
 
 The following should be considered 1) incomplete, and 2) *REQUIRED READING*. I don't always agree with the style written by the authors below, but one thing is certain: They are consistent. Furthermore, these are authorities on the language.
 
- * [Baseline For Front End Developers](http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers/)
- * [Eloquent JavaScript](http://eloquentjavascript.net/)
- * [JavaScript, JavaScript](http://javascriptweblog.wordpress.com/)
- * [Adventures in JavaScript Development](http://rmurphey.com/)
- * [Perfection Kills](http://perfectionkills.com/)
- * [Douglas Crockford's Wrrrld Wide Web](http://www.crockford.com)
- * [JS Assessment](https://github.com/rmurphey/js-assessment)
- * [Leveraging Code Quality Tools by Anton Kovalyov](http://anton.kovalyov.net/slides/gothamjs/)
+* [Baseline For Front End Developers](http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers/)
+* [Eloquent JavaScript](http://eloquentjavascript.net/)
+* [JavaScript, JavaScript](http://javascriptweblog.wordpress.com/)
+* [Adventures in JavaScript Development](http://rmurphey.com/)
+* [Perfection Kills](http://perfectionkills.com/)
+* [Douglas Crockford's Wrrrld Wide Web](http://www.crockford.com)
+* [JS Assessment](https://github.com/rmurphey/js-assessment)
+* [Leveraging Code Quality Tools by Anton Kovalyov](http://anton.kovalyov.net/slides/gothamjs/)
 
-## 9. Build & Deployment Process
+## 10. Build & Deployment Process
 
 Projects should always attempt to include some generic means by which source can be linted, tested, compressed, and versioned in preparation for production use. For this task, Deloitte Digital normally uses [Middleman](http://middlemanapp.com). [grunt](https://github.com/cowboy/grunt) by Ben Alman is another excellent tool.
 
 
-## 10. License
+## 11. License
 
 _Principles of Writing Consistent, Idiomatic JavaScript_ by Rick Waldron and Contributors is licensed under the [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/). This applies to all documents and translations in this repository.
 
