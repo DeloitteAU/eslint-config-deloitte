@@ -5,28 +5,30 @@ This styleguide has been forked from Rick Waldron's [Idiomatic JavaScript](https
 
 ## Table of Contents
 
-* Whitespace
-* Beautiful Syntax
-* Practical Style
-* Naming
-* Misc
-* Comments
-* Other important stuff
-* Acknowledgements
-* License
+1. Whitespace
+2. Beautiful Syntax
+3. Practical Style
+4. Naming
+5. Misc
+6. Comments
+7. Code Quality Tools, Resources & References
+8. Get Smart
+9. Build & Deployment Process
+10. Acknowledgements
+11. License
 
 
 ## Idiomatic Style Manifesto
 
 
 ## Whitespace
-- Never mix spaces and tabs.
-- Always use real tabs instead of spaces. This allows other developers to set a tab width of their choice.
-- If your editor supports it, always work with the "show invisibles" setting turned on. In Sublime Text, this can be achieved by adding `"draw_white_space": "all"` to your User Preferences file. The benefits of this practice are:
-	- Enforced consistency
-	- Eliminating end of line whitespace
-	- Eliminating blank line whitespace
-	- Commits and diffs that are easier to read
+* Never mix spaces and tabs.
+* Always use real tabs instead of spaces. This allows other developers to set a tab width of their choice.
+* If your editor supports it, always work with the "show invisibles" setting turned on. In Sublime Text, this can be achieved by adding `"draw_white_space": "all"` to your User Preferences file. The benefits of this practice are:
+	* Enforced consistency
+	* Eliminating end of line whitespace
+	* Eliminating blank line whitespace
+	* Commits and diffs that are easier to read
 
 Tip: use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to help maintain the basic whitespace conventions that have been agreed for your code-base. This has been added to the Deloitte Middleman template.
 
@@ -628,9 +630,7 @@ function returnEarly( foo ) {
 * JSDoc style is good, but requires a significant time investment
 
 
-## Important, Non-Idiomatic Stuff:
-
-### Code Quality Tools, Resources & References
+## 7. Code Quality Tools, Resources & References
 
  * [JavaScript Plugin](http://docs.codehaus.org/display/SONAR/JavaScript+Plugin) for [Sonar](http://www.sonarsource.org/)
  * [jsPerf](http://jsperf.com/)
@@ -641,7 +641,7 @@ function returnEarly( foo ) {
  * [jslint](http://jslint.org/)
 
 
-## Get Smart
+## 8. Get Smart
 
 ### [Annotated ECMAScript 5.1](http://es5.github.com/)
 ### [EcmaScript Language Specification, 5.1 Edition](http://ecma-international.org/ecma-262/5.1/)
@@ -657,12 +657,12 @@ The following should be considered 1) incomplete, and 2) *REQUIRED READING*. I d
  * [JS Assessment](https://github.com/rmurphey/js-assessment)
  * [Leveraging Code Quality Tools by Anton Kovalyov](http://anton.kovalyov.net/slides/gothamjs/)
 
-### Build & Deployment Process
+## 9. Build & Deployment Process
 
 Projects should always attempt to include some generic means by which source can be linted, tested, compressed, and versioned in preparation for production use. For this task, Deloitte Digital normally uses [Middleman](http://middlemanapp.com). [grunt](https://github.com/cowboy/grunt) by Ben Alman is another excellent tool.
 
 
-## Acknowledgements
+## 10. Acknowledgements
 
 * Rick Waldron [@rwaldron](http://twitter.com/rwaldron), [github](https://github.com/rwldrn)
 * Mathias Bynens [@mathias](http://twitter.com/mathias), [github](https://github.com/mathiasbynens)
@@ -687,7 +687,7 @@ Projects should always attempt to include some generic means by which source can
 * Miloš Gavrilović [@gavrisimo](http://twitter.com/gavrisimo), [github](https://github.com/gavrisimo)
 
 
-## License
+## 11. License
 
 _Principles of Writing Consistent, Idiomatic JavaScript_ by Rick Waldron and Contributors is licensed under the [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/). This applies to all documents and translations in this repository.
 
