@@ -498,6 +498,18 @@ Well commented code is extremely important. Take time to describe components, ho
 * Use "sentence case" comments and consistent text indentation.
 * JSDoc style is good, but requires a significant time investment.
 
+#### Example:
+
+```javascript
+
+/* ==========================================================================
+ * Section comment block
+ * ========================================================================== */
+
+/* Sub-section comment block
+ * ========================================================================== */
+
+```
 
 ## 7. Code Quality Tools, Resources & References
 
