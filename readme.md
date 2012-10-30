@@ -10,12 +10,11 @@ This styleguide has been forked from Rick Waldron's [Idiomatic JavaScript](https
 3. Beautiful Syntax
 4. Practical Style
 5. Naming
-6. Misc
-7. Comments
-8. Code Quality Tools, Resources & References
-9. Get Smart
-10. Build & Deployment Process
-11. License
+6. Comments
+7. Code Quality Tools, Resources & References
+8. Get Smart
+9. Build & Deployment Process
+10. License
 
 
 ## 1. General principles
@@ -315,7 +314,7 @@ Whitespace can ruin diffs and make changesets impossible to read. Use an [Editor
 // 4.1.1
 // A Practical Module
 
-(function( global ) {
+(function( NAMESPACE ) {
 	var Module = (function() {
 
 		var data = 'secret';
@@ -345,9 +344,9 @@ Whitespace can ruin diffs and make changesets impossible to read. Use an [Editor
 	// Other things might happen here
 
 	// expose our module to the global object
-	global.Module = Module;
+	NAMESPACE.Module = Module;
 
-})( this );
+})( DDIGITAL );
 
 ```
 
@@ -356,7 +355,7 @@ Whitespace can ruin diffs and make changesets impossible to read. Use an [Editor
 // 4.2.1
 // A Practical Constructor
 
-(function( global ) {
+(function( NAMESPACE ) {
 
 	function Ctor( foo ) {
 
@@ -381,9 +380,9 @@ Whitespace can ruin diffs and make changesets impossible to read. Use an [Editor
 
 
 	// expose our constructor to the global object
-	global.ctor = ctor;
+	NAMESPACE.ctor = ctor;
 
-})( this );
+})( DDIGITAL );
 
 ```
 
@@ -450,7 +449,7 @@ A few additional naming pointers:
 // 5.A.3.3
 // Naming booleans
 
-`hasFocus` is clearly a boolean. `focus` is ambigious.
+`hasFocus` is clearly a boolean. `focus` is ambigious
 `isEnabled` is a clearly a boolean
 
 
@@ -461,7 +460,7 @@ camelCase; function and var declarations
 
 
 // 5.A.3.4
-// Naming constructors, prototypes, etc.
+// Naming constructors, prototypes, etc
 
 PascalCase; constructor function
 
@@ -481,156 +480,14 @@ ConstructorNamesLikeThis;
 SYMBOLIC_CONSTANTS_LIKE_THIS;
 
 // 5.A.3.7
-// Global variables.
-// Use all caps to indicate that you intended to use a global var.
+// Global variables
+// Use all caps to indicate that you intended to use a global var
 var DDIGITAL = {};
 
 ```
 
 
-## 6. Misc
-
-This section will serve to illustrate ideas and concepts that should not be considered dogma, but instead exists to encourage questioning practices in an attempt to find better ways to do common JavaScript programming tasks.
-
-### A. Using `switch` should be avoided, modern method tracing will blacklist functions with switch statements
-
-There seems to be drastic improvements to the execution of `switch` statements in latest releases of Firefox and Chrome.
-http://jsperf.com/switch-vs-object-literal-vs-module
-
-Notable improvements can be witnesses here as well:
-https://github.com/rwldrn/idiomatic.js/issues/13
-
-```javascript
-
-// 6.A.1.1
-// An example switch statement
-
-switch( foo ) {
-	case 'alpha':
-		alpha();
-		break;
-	case 'beta':
-		beta();
-		break;
-	default:
-		// something to default to
-		break;
-}
-
-// 6.A.1.2
-// A alternate approach that supports composability and reusability is to
-// use an object to store "cases" and a function to delegate:
-
-var cases, delegator;
-
-// Example returns for illustration only.
-cases = {
-	alpha: function() {
-		// statements
-		// a return
-		return [ 'Alpha', arguments.length ];
-	},
-	beta: function() {
-		// statements
-		// a return
-		return [ 'Beta', arguments.length ];
-	},
-	_default: function() {
-		// statements
-		// a return
-		return [ 'Default', arguments.length ];
-	}
-};
-
-delegator = function() {
-	var args, key, delegate;
-
-	// Transform arguments list into an array
-	args = [].slice.call( arguments );
-
-	// shift the case key from the arguments
-	key = args.shift();
-
-	// Assign the default case handler
-	delegate = cases._default;
-
-	// Derive the method to delegate operation to
-	if ( cases.hasOwnProperty( key ) ) {
-		delegate = cases[ key ];
-	}
-
-	// The scope arg could be set to something specific,
-	// in this case, |null| will suffice
-	return delegate.apply( null, args );
-};
-
-// 6.A.1.3
-// Put the API in 6.A.1.2 to work:
-
-delegator( 'alpha', 1, 2, 3, 4, 5 );
-// [ 'Alpha', 5 ]
-
-// Of course, the `case` key argument could easily be based
-// on some other arbitrary condition.
-
-var caseKey, someUserInput;
-
-// Possibly some kind of form input?
-someUserInput = 9;
-
-if ( someUserInput > 10 ) {
-	caseKey = 'alpha';
-} else {
-	caseKey = 'beta';
-}
-
-// or...
-
-caseKey = someUserInput > 10 ? 'alpha' : 'beta';
-
-// And then...
-
-delegator( caseKey, someUserInput );
-// [ 'Beta', 1 ]
-
-// And of course...
-
-delegator();
-// [ 'Default', 0 ]
-
-```
-
-### B. Early returns promote code readability with negligible performance difference
-
-```javascript
-
-// 6.B.1.1
-// Bad:
-function returnLate( foo ) {
-	var ret;
-
-	if ( foo ) {
-		ret = 'foo';
-	} else {
-		ret = 'quux';
-	}
-	return ret;
-}
-
-// Good:
-
-function returnEarly( foo ) {
-
-	if ( foo ) {
-		return 'foo';
-	}
-	return 'quux';
-}
-
-```
-
-
-## 7. Comments
+## 6. Comments
 
 Well commented code is extremely important. Take time to describe components, how they work, their limitations, and the way they are constructed. Don't leave others in the team guessing as to the purpose of uncommon or non-obvious code.
 
@@ -642,7 +499,7 @@ Well commented code is extremely important. Take time to describe components, ho
 * JSDoc style is good, but requires a significant time investment.
 
 
-## 8. Code Quality Tools, Resources & References
+## 7. Code Quality Tools, Resources & References
 
 * [JavaScript Plugin](http://docs.codehaus.org/display/SONAR/JavaScript+Plugin) for [Sonar](http://www.sonarsource.org/)
 * [jsPerf](http://jsperf.com/)
@@ -652,7 +509,7 @@ Well commented code is extremely important. Take time to describe components, ho
 * [jslint](http://jslint.org/)
 
 
-## 9. Get Smart
+## 8. Get Smart
 
 * [Annotated ECMAScript 5.1](http://es5.github.com/)
 * [EcmaScript Language Specification, 5.1 Edition](http://ecma-international.org/ecma-262/5.1/)
@@ -668,12 +525,12 @@ The following should be considered 1) incomplete, and 2) *REQUIRED READING*. I d
 * [JS Assessment](https://github.com/rmurphey/js-assessment)
 * [Leveraging Code Quality Tools by Anton Kovalyov](http://anton.kovalyov.net/slides/gothamjs/)
 
-## 10. Build & Deployment Process
+## 9. Build & Deployment Process
 
 Projects should always attempt to include some generic means by which source can be linted, tested, compressed, and versioned in preparation for production use. For this task, Deloitte Digital normally uses [Middleman](http://middlemanapp.com). [grunt](https://github.com/cowboy/grunt) by Ben Alman is another excellent tool.
 
 
-## 11. License
+## 10. License
 
 _Principles of Writing Consistent, Idiomatic JavaScript_ by Rick Waldron and Contributors is licensed under the [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/). This applies to all documents and translations in this repository.
 
