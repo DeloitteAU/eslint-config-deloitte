@@ -274,14 +274,14 @@ Whitespace can ruin diffs and make changesets impossible to read. Use an [Editor
 				return (data = value);
 			}
 		};
-	})();
+	}());
 
 	// Other things might happen here
 
 	// expose our module to the global object
 	NAMESPACE.Module = Module;
 
-})(DDIGITAL);
+}(DDIGITAL));
 
 ```
 
@@ -317,7 +317,7 @@ Whitespace can ruin diffs and make changesets impossible to read. Use an [Editor
 	// expose our constructor to the global object
 	NAMESPACE.ctor = ctor;
 
-})(DDIGITAL);
+}(DDIGITAL));
 
 ```
 
