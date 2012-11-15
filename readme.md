@@ -62,15 +62,15 @@ for(var i=0;i<100;i++) someIterativeFn();
 // 3.A.1.1
 // Use whitespace to promote readability
 
-if ( condition ) {
+if (condition) {
 	// statements
 }
 
-while ( condition ) {
+while (condition) {
 	// statements
 }
 
-for ( var i = 0; i < 100; i++ ) {
+for (var i = 0; i < 100; i++) {
 	// statements
 }
 
@@ -79,7 +79,7 @@ for ( var i = 0; i < 100; i++ ) {
 var i,
 	length = 100;
 
-for ( i = 0; i < length; i++ ) {
+for (i = 0; i < length; i++) {
 	// statements
 }
 
@@ -88,18 +88,18 @@ for ( i = 0; i < length; i++ ) {
 var i = 0,
 	length = 100;
 
-for ( ; i < length; i++ ) {
+for (; i < length; i++) {
 	// statements
 }
 
 var prop;
 
-for ( prop in object ) {
+for (prop in object) {
 	// statements
 }
 
 
-if ( true ) {
+if (true) {
 	// statements
 } else {
 	// statements
@@ -121,6 +121,16 @@ var foo = 'bar',
 // Literal notations:
 var array = [],
 	object = {};
+
+// Arrays on one line:
+array = ['a', 'b', 'c'];
+
+// Object literals with one property per line:
+object = {
+	a: 1,
+	b: 2,
+	c: 3
+};
 
 
 // 3.B.1.2
@@ -170,36 +180,36 @@ function foo() {
 
 // 3.B.2.1
 // Named Function Declaration
-function foo( arg1, argN ) {
+function foo(arg1, argN) {
 
 }
 
 // Usage
-foo( arg1, argN );
+foo(arg1, argN);
 
 
 // 3.B.2.2
 // Named Function Declaration
-function square( number ) {
+function square(number) {
 	return number * number;
 }
 
 // Usage
-square( 10 );
+square(10);
 
 // Really contrived continuation passing style
-function square( number, callback ) {
-	callback( number * number );
+function square(number, callback) {
+	callback(number * number);
 }
 
-square( 10, function( square ) {
+square(10, function(square) {
 	// callback statements
 });
 
 
 // 3.B.2.3
 // Function Expression
-var square = function( number ) {
+var square = function(number) {
 	// Return something valuable and relevant
 	return number * number;
 };
@@ -207,93 +217,18 @@ var square = function( number ) {
 // Function Expression with Identifier
 // This preferred form has the added value of being
 // able to call itself and have an identity in stack traces:
-var factorial = function factorial( number ) {
-	if ( number < 2 ) {
+var factorial = function factorial(number) {
+	if (number < 2) {
 		return 1;
 	}
 
-	return number * factorial( number-1 );
+	return number * factorial(number - 1);
 };
 
-
-// 3.B.2.4
-// Constructor Declaration
-function FooBar( options ) {
-
-	this.options = options;
-}
-
-// Usage
-var fooBar = new FooBar({ a: 'alpha' });
-
-fooBar.options;
-// { a: 'alpha' }
-
 ```
 
 
-### C. Exceptions, Slight Deviations
-
-```javascript
-
-// 3.C.1.1
-// Functions with callbacks
-foo(function() {
-	// Note there is no extra space between the first paren
-	// of the executing function call and the word "function"
-});
-
-// Function accepting an array, no space
-foo([ 'alpha', 'beta' ]);
-
-// 3.C.1.2
-// Function accepting an object, no space
-foo({
-	a: 'alpha',
-	b: 'beta'
-});
-
-// Single argument string literal, no space
-foo('bar');
-
-// Inner grouping parens, no space
-if ( !('foo' in obj) ) {
-
-}
-
-```
-
-
-### D. Consistency Always Wins
-
-In sections 3.A-3.C, the whitespace rules are set forth as a recommendation with a simpler, higher purpose: consistency. It's important to note that formatting preferences, such as "inner whitespace" should be considered optional, but only one style should exist across the entire source of your project.
-
-```javascript
-
-// 3.D.1.1
-
-if (condition) {
-	// statements
-}
-
-while (condition) {
-	// statements
-}
-
-for (var i = 0; i < 100; i++) {
-	// statements
-}
-
-if (true) {
-	// statements
-} else {
-	// statements
-}
-
-```
-
-
-### E. Quotes
+### C. Quotes
 
 There is no difference in how JavaScript parses single and double quotes, but we prefer single quotes because this allows us to use double quotes for HTML attributes.
 
@@ -302,7 +237,7 @@ var dog = '<div class="dog"></div>';
 ```
 
 
-### F. End of Lines and Empty Lines
+### D. End of Lines and Empty Lines
 
 Whitespace can ruin diffs and make changesets impossible to read. Use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to strip the whitespace from the ends of lines. This has been added to the Deloitte Middleman template.
 
@@ -314,7 +249,7 @@ Whitespace can ruin diffs and make changesets impossible to read. Use an [Editor
 // 4.1.1
 // A Practical Module
 
-(function( NAMESPACE ) {
+(function(NAMESPACE) {
 	var Module = (function() {
 
 		var data = 'secret';
@@ -325,7 +260,7 @@ Whitespace can ruin diffs and make changesets impossible to read. Use an [Editor
 			// Some string value
 			string: 'a string',
 			// An array property
-			array: [ 1, 2, 3, 4 ],
+			array: [1, 2, 3, 4],
 			// An object property
 			object: {
 				lang: 'en-Us'
@@ -334,9 +269,9 @@ Whitespace can ruin diffs and make changesets impossible to read. Use an [Editor
 				// get the current value of `data`
 				return data;
 			},
-			setData: function( value ) {
+			setData: function(value) {
 				// set the value of `data` and return it
-				return ( data = value );
+				return (data = value);
 			}
 		};
 	})();
@@ -346,7 +281,7 @@ Whitespace can ruin diffs and make changesets impossible to read. Use an [Editor
 	// expose our module to the global object
 	NAMESPACE.Module = Module;
 
-})( DDIGITAL );
+})(DDIGITAL);
 
 ```
 
@@ -355,9 +290,9 @@ Whitespace can ruin diffs and make changesets impossible to read. Use an [Editor
 // 4.2.1
 // A Practical Constructor
 
-(function( NAMESPACE ) {
+(function(NAMESPACE) {
 
-	function Ctor( foo ) {
+	function Ctor(foo) {
 
 		this.foo = foo;
 
@@ -368,21 +303,21 @@ Whitespace can ruin diffs and make changesets impossible to read. Use an [Editor
 		return this.foo;
 	};
 
-	Ctor.prototype.setFoo = function( val ) {
-		return ( this.foo = val );
+	Ctor.prototype.setFoo = function(val) {
+		return (this.foo = val);
 	};
 
 
 	// To call constructor's without `new`, you might do this:
-	var ctor = function( foo ) {
-		return new Ctor( foo );
+	var ctor = function(foo) {
+		return new Ctor(foo);
 	};
 
 
 	// expose our constructor to the global object
 	NAMESPACE.ctor = ctor;
 
-})( DDIGITAL );
+})(DDIGITAL);
 
 ```
 
@@ -415,8 +350,8 @@ Here's the same piece of logic, but with kinder, more thoughtful naming (and a r
 // 5.A.2.1
 // Example of code with improved names
 
-function query( selector ) {
-	return document.querySelectorAll( selector );
+function query(selector) {
+	return document.querySelectorAll(selector);
 }
 
 var idx = 0,
@@ -424,8 +359,8 @@ var idx = 0,
 	matches = query('#foo'),
 	length = matches.length;
 
-for ( ; idx < length; idx++ ) {
-	elements.push( matches[ idx ] );
+for (; idx < length; idx++) {
+	elements.push(matches[idx]);
 }
 
 ```
