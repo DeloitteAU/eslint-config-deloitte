@@ -1,0 +1,29 @@
+{
+  "name": "eslint-config-deloitte",
+  "version": "1.0.0",
+  "description": "Deloitte's ESLint config for our styleguide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://hub.deloittedigital.com.au/stash/scm/fed/javascript-styleguide.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "deloitte",
+    "styleguide"
+  ],
+  "peerDependencies": {
+    "eslint": "^3.5.0",
+    "eslint-plugin-import": "^1.15.0"
+  },
+  "engines": {
+    "node": ">= 4"
+  },
+  "author": "Deloitte",
+  "license": "BSD-3-Clause"
+}
