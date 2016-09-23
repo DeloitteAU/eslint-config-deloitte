@@ -17,6 +17,10 @@
     "deloitte",
     "styleguide"
   ],
+  "devDependencies": {
+	"eslint": "^3.5.0",
+	"eslint-plugin-import": "^1.15.0"
+  },
   "peerDependencies": {
     "eslint": "^3.5.0",
     "eslint-plugin-import": "^1.15.0"

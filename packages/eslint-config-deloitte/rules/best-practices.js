@@ -37,7 +37,7 @@ module.exports = {
 
 		// Disallow Use of caller/callee
 		// http://eslint.org/docs/rules/no-caller
-		'no-caller': 'error'
+		'no-caller': 'error',
 
 		// Disallow empty block statements
 		// http://eslint.org/docs/rules/no-empty
@@ -53,20 +53,20 @@ module.exports = {
 
 		// Enforce the consistent use of single quotes
 		// http://eslint.org/docs/rules/quotes
-		'quotes': ['error', 'single']
+		'quotes': ['error', 'single'],
 
 		// Disallow Undeclared Variables
 		// http://eslint.org/docs/rules/no-undef
-		'no-undef': 'error'
+		'no-undef': 'error',
 
 		// Warn of Unused Variables
 		// http://eslint.org/docs/rules/no-unused-vars
-		'no-unused-vars': 'warn'.
+		'no-unused-vars': 'warn',
 
 		// Require or disallow strict mode directives
 		// babel inserts `'use strict';` for us
 		// http://eslint.org/docs/rules/strict
-		strict: ['error', 'never']
+		strict: ['error', 'never'],
 		
 		// Require or disallow semicolons instead of ASI
 		// http://eslint.org/docs/rules/semi
@@ -86,21 +86,21 @@ module.exports = {
 
 		// Require quotes around object literal property names
 		// http://eslint.org/docs/rules/quote-props
-		'quote-props': ['error', 'consistent-as-needed']
+		'quote-props': ['error', 'consistent-as-needed'],
 
 		// Enforce consistent spacing between keys and values in object literal properties
 		// http://eslint.org/docs/rules/key-spacing
 		'key-spacing': ['error', {
 			beforeColon: false,
 			afterColon: true
-		}]
+		}],
 
 		// Require or disallow spaces before/after unary operators
 		// http://eslint.org/docs/rules/space-unary-ops
 		'space-unary-ops': ['error', {
 			words: false,
 			nonwords: false
-		}]
+		}],
 
 		// Disallow mixed spaces and tabs for indentation
 		// http://eslint.org/docs/rules/no-mixed-spaces-and-tabs'
@@ -129,7 +129,7 @@ module.exports = {
 
 		// Require Or Disallow Space Before Blocks
 		// http://eslint.org/docs/rules/space-before-blocks
-		'space-before-blocks': ['error', 'always']
+		'space-before-blocks': ['error', 'always'],
 
 		// Disable variables to be declared together
 		// http://eslint.org/docs/rules/one-var
@@ -149,7 +149,7 @@ module.exports = {
 
 		// Require Dot Notation
 		// http://eslint.org/docs/rules/dot-notation
-		'dot-notation': 'error'
+		'dot-notation': 'error',
 
 		// Enforce consistent spacing before and after keywords
 		// http://eslint.org/docs/rules/keyword-spacing
