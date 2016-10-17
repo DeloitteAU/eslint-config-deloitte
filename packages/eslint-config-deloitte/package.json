@@ -1,6 +1,6 @@
 {
-  "name": "dd-eslint-config-deloitte",
-  "version": "1.0.2",
+  "name": "eslint-config-deloitte",
+  "version": "1.0.0",
   "description": "Deloitte's ESLint config for our styleguide",
   "main": "./index.js",
   "scripts": {
