@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://hub.deloittedigital.com.au/stash/scm/fed/javascript-styleguide.git"
+    "url": "ssh://git@hub.deloittedigital.com.au:7999/fed/eslint-config-deloitte.git"
   },
   "keywords": [
     "eslint",
