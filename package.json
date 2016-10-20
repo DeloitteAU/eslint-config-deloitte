@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@hub.deloittedigital.com.au:7999/fed/eslint-config-deloitte.git"
+    "url": "ssh://git@hub.deloittedigital.com.au:7999/fed/eslint-configuration.git"
   },
   "keywords": [
     "eslint",
