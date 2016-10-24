@@ -1,6 +1,9 @@
 module.exports = {
-	rules: {
+	env: {
+		browser: true
+	},
 
+	rules: {
 		// Disallow bitwise operators
 		// http://eslint.org/docs/rules/no-bitwise
 		'no-bitwise': 'error',
