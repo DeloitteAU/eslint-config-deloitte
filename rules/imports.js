@@ -1,138 +1,140 @@
 module.exports = {
-  env: {
-    es6: true
-  },
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module'
-  },
-  plugins: [
-    'import'
-  ],
+	env: {
+		es6: true
+	},
 
-  settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.json']
-      }
-    },
-    'import/extensions': [
-      '.js',
-      '.jsx',
-    ],
-    'import/core-modules': [
-    ],
-    'import/ignore': [
-      'node_modules',
-      '\\.(coffee|scss|css|less|hbs|svg|json)$',
-    ],
-  },
+	parserOptions: {
+		ecmaVersion: 6,
+		sourceType: 'module'
+	},
 
-  rules: {
-    // Static analysis:
+	plugins: [
+		'import'
+	],
 
-    // ensure imports point to files/modules that can be resolved
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
-    'import/no-unresolved': ['error', { commonjs: true }],
+	settings: {
+		'import/resolver': {
+			node: {
+				extensions: ['.js', '.json']
+			}
+		},
+		'import/extensions': [
+			'.js',
+			'.jsx'
+		],
+		'import/core-modules': [
+		],
+		'import/ignore': [
+			'node_modules',
+			'\\.(coffee|scss|css|less|hbs|svg|json)$'
+		]
+	},
 
-    // ensure named imports coupled with named exports
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md#when-not-to-use-it
-    'import/named': 'off',
+	rules: {
+		// Static analysis:
 
-    // ensure default import coupled with default export
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md#when-not-to-use-it
-    'import/default': 'off',
+		// ensure imports point to files/modules that can be resolved
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
+		'import/no-unresolved': ['error', { commonjs: true }],
 
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md
-    'import/namespace': 'off',
+		// ensure named imports coupled with named exports
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md#when-not-to-use-it
+		'import/named': 'off',
 
-    // Helpful warnings:
+		// ensure default import coupled with default export
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md#when-not-to-use-it
+		'import/default': 'off',
 
-    // disallow invalid exports, e.g. multiple defaults
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md
-    'import/export': 'error',
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md
+		'import/namespace': 'off',
 
-    // do not allow a default import name to match a named export
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md
-    'import/no-named-as-default': 'error',
+		// Helpful warnings:
 
-    // warn on accessing default export property names that are also named exports
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md
-    'import/no-named-as-default-member': 'error',
+		// disallow invalid exports, e.g. multiple defaults
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md
+		'import/export': 'error',
 
-    // disallow use of jsdoc-marked-deprecated imports
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-deprecated.md
-    'import/no-deprecated': 'off',
+		// do not allow a default import name to match a named export
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md
+		'import/no-named-as-default': 'error',
 
-    // Forbid the use of extraneous packages
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
-    'import/no-extraneous-dependencies': ['error', {
-      devDependencies: false,
-      optionalDependencies: false,
-    }],
+		// warn on accessing default export property names that are also named exports
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md
+		'import/no-named-as-default-member': 'error',
 
-    // Forbid mutable exports
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
-    'import/no-mutable-exports': 'error',
+		// disallow use of jsdoc-marked-deprecated imports
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-deprecated.md
+		'import/no-deprecated': 'off',
 
-    // Module systems:
+		// Forbid the use of extraneous packages
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
+		'import/no-extraneous-dependencies': ['error', {
+			devDependencies: false,
+			optionalDependencies: false
+		}],
 
-    // disallow require()
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
-    'import/no-commonjs': 'off',
+		// Forbid mutable exports
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
+		'import/no-mutable-exports': 'error',
 
-    // disallow AMD require/define
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
-    'import/no-amd': 'error',
+		// Module systems:
 
-    // No Node.js builtin modules
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
-    'import/no-nodejs-modules': 'off',
+		// disallow require()
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
+		'import/no-commonjs': 'off',
 
-    // Style guide:
+		// disallow AMD require/define
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
+		'import/no-amd': 'error',
 
-    // disallow non-import statements appearing before import statements
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/imports-first.md
-    'import/imports-first': ['error', 'absolute-first'],
+		// No Node.js builtin modules
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
+		'import/no-nodejs-modules': 'off',
 
-    // disallow duplicate imports
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
-    'import/no-duplicates': 'error',
+		// Style guide:
 
-    // disallow namespace imports
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-namespace.md
-    'import/no-namespace': 'off',
+		// disallow non-import statements appearing before import statements
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/imports-first.md
+		'import/imports-first': ['error', 'absolute-first'],
 
-    // Ensure consistent use of file extension within the import path
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
-    // TODO: enable when https://github.com/benmosher/eslint-plugin-import/issues/390 is resolved
-    'import/extensions': ['off', 'never'],
+		// disallow duplicate imports
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
+		'import/no-duplicates': 'error',
 
-    // Enforce a convention in module import order
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
-    'import/order': ['off', {
-      groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-      'newlines-between': 'never',
-    }],
+		// disallow namespace imports
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-namespace.md
+		'import/no-namespace': 'off',
 
-    // Require a newline after the last import/require in a group
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
-    'import/newline-after-import': 'error',
+		// Ensure consistent use of file extension within the import path
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
+		// TODO: enable when https://github.com/benmosher/eslint-plugin-import/issues/390 is resolved
+		'import/extensions': ['off', 'never'],
 
-    // Require modules with a single export to use a default export
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
-    'import/prefer-default-export': 'error',
+		// Enforce a convention in module import order
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
+		'import/order': ['off', {
+			'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+			'newlines-between': 'never'
+		}],
 
-    // Restrict which files can be imported in a given folder
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
-    'import/no-restricted-paths': 'off',
+		// Require a newline after the last import/require in a group
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
+		'import/newline-after-import': 'error',
 
-    // Forbid modules to have too many dependencies
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
-    'import/max-dependencies': ['off', { max: 10 }],
+		// Require modules with a single export to use a default export
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
+		'import/prefer-default-export': 'error',
 
-    // Forbid import of modules using absolute paths
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
-    'import/no-absolute-path': ['off'],
-  },
+		// Restrict which files can be imported in a given folder
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
+		'import/no-restricted-paths': 'off',
+
+		// Forbid modules to have too many dependencies
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
+		'import/max-dependencies': ['off', { max: 10 }],
+
+		// Forbid import of modules using absolute paths
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
+		'import/no-absolute-path': ['off']
+	}
 };

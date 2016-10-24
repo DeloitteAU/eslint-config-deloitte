@@ -4,7 +4,7 @@
   "description": "Deloitte's ESLint config for our styleguide",
   "main": "./index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --config node.js \"**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -21,16 +21,16 @@
     "registry": "http://ausyd6856.au.deloitte.com:4567"
   },
   "devDependencies": {
-	"eslint": "^3.5.0",
-	"eslint-plugin-import": "^1.15.0"
+    "eslint": "^3.8.1",
+    "eslint-plugin-import": "^2.0.1"
   },
   "peerDependencies": {
-    "eslint": "^3.5.0",
-    "eslint-plugin-import": "^1.15.0"
+    "eslint": "^3.8.1",
+    "eslint-plugin-import": "^2.0.1"
   },
   "engines": {
     "node": ">= 4"
   },
-  "author": "Deloitte",
+  "author": "Deloitte Digital Australia (http://deloittedigital.com.au)",
   "license": "BSD-3-Clause"
 }
