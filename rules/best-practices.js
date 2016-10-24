@@ -20,7 +20,7 @@ module.exports = {
 
 		// Require === and !==
 		// http://eslint.org/docs/rules/eqeqeq
-		'eqeqeq': ['error', 'always', {'null': 'ignore'}],
+		'eqeqeq': ['error', 'always', {'null': 'ignore'}], // eslint-disable-line quote-props
 
 		// Require Guarding for-in
 		// http://eslint.org/docs/rules/guard-for-in
@@ -69,8 +69,8 @@ module.exports = {
 		// Require or disallow strict mode directives
 		// babel inserts `'use strict';` for us
 		// http://eslint.org/docs/rules/strict
-		strict: ['error', 'never'],
-		
+		'strict': ['error', 'never'],
+
 		// Require or disallow semicolons instead of ASI
 		// http://eslint.org/docs/rules/semi
 		'semi': 'error',
