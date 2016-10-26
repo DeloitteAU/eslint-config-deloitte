@@ -1,8 +1,5 @@
 module.exports = {
 	extends: [
 		'./rules/best-practices'
-	].map(require.resolve),
-	env: {
-		jquery: true
-	}
+	].map(require.resolve)
 };

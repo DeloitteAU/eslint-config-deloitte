@@ -5,17 +5,7 @@ module.exports = {
 
 	globals: {
 		DDIGITAL: true,
-		DD_BUILD: true,
-		Modernizr: true,
-		enquire: true,
-		DD: true,
-		YT: true,
-		google: true,
-		Handlebars: true,
-		grunticon: true,
-		module: true,
-		process: true,
-		WebFontConfig: true
+		DD: true
 	},
 
 	rules: {
