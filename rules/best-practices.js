@@ -3,6 +3,11 @@ module.exports = {
 		browser: true
 	},
 
+	globals: {
+		DDIGITAL: true,
+		DD: true
+	},
+
 	rules: {
 		// Disallow bitwise operators
 		// http://eslint.org/docs/rules/no-bitwise
@@ -20,7 +25,9 @@ module.exports = {
 
 		// Require === and !==
 		// http://eslint.org/docs/rules/eqeqeq
-		'eqeqeq': ['error', 'always', {'null': 'ignore'}], // eslint-disable-line quote-props
+		'eqeqeq': ['error', 'always', {
+			'null': 'ignore' // eslint-disable-line quote-props
+		}],
 
 		// Require Guarding for-in
 		// http://eslint.org/docs/rules/guard-for-in
@@ -67,9 +74,9 @@ module.exports = {
 		'no-unused-vars': 'warn',
 
 		// Require or disallow strict mode directives
-		// babel inserts `'use strict';` for us
+		// babel inserts `'use strict';` for you, so if your project uses babel, override this rule to 'strict': ['error', 'never']
 		// http://eslint.org/docs/rules/strict
-		'strict': ['error', 'never'],
+		'strict': 'error',
 
 		// Require or disallow semicolons instead of ASI
 		// http://eslint.org/docs/rules/semi
