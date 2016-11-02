@@ -1,14 +1,14 @@
 {
   "name": "eslint-config-deloitte",
   "version": "1.0.0",
-  "description": "Deloitte's ESLint config for our styleguide",
+  "description": "This package provides Deloitte Digital's code standards as an ESLint extensible config",
   "main": "./index.js",
   "scripts": {
     "lint": "eslint --config node.js \"**/*.js\""
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@hub.deloittedigital.com.au:7999/fed/eslint-configuration.git"
+    "url": "ssh://git@github.com:DeloitteDigitalAPAC/eslint-config-deloitte.git"
   },
   "keywords": [
     "eslint",
@@ -17,9 +17,6 @@
     "deloitte",
     "styleguide"
   ],
-  "publishConfig": {
-    "registry": "http://ausyd6856.au.deloitte.com:4567"
-  },
   "devDependencies": {
     "eslint": "^3.8.1",
     "eslint-plugin-import": "^2.0.1"
