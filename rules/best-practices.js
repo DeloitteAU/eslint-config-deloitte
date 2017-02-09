@@ -9,6 +9,10 @@ module.exports = {
 	},
 
 	rules: {
+		// Disallow debugger;
+		//http://eslint.org/docs/rules/no-debugger
+		'no-debugger': 'error',
+
 		// Disallow bitwise operators
 		// http://eslint.org/docs/rules/no-bitwise
 		'no-bitwise': 'error',
