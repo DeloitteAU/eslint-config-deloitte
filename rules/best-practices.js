@@ -126,8 +126,7 @@ module.exports = {
 
 		// Require or disallow trailing commas
 		// http://eslint.org/docs/rules/comma-dangle
-		// TODO: Talk to Damo and Keegan about turning this on
-		'comma-dangle': ['error', 'never'],
+		'comma-dangle': ['error', 'always-multiline'],
 
 		// Disallow Yoda Conditions
 		// http://eslint.org/docs/rules/yoda
