@@ -23,9 +23,11 @@
   "author": "Deloitte Digital Australia (http://deloittedigital.com.au)",
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "eslint": "^3.19.0"
+    "eslint": "^3.19.0",
+		"eslint-plugin-import": "^2.2.0",
   },
   "peerDependencies": {
-    "eslint": "^3.19.0"
+    "eslint": "^3.19.0",
+		"eslint-plugin-import": "^2.2.0"
   }
 }
