@@ -10,7 +10,7 @@ module.exports = {
 
 	rules: {
 		// Disallow debugger;
-		//http://eslint.org/docs/rules/no-debugger
+		// http://eslint.org/docs/rules/no-debugger
 		'no-debugger': 'error',
 
 		// Disallow bitwise operators
@@ -126,7 +126,13 @@ module.exports = {
 
 		// Require or disallow trailing commas
 		// http://eslint.org/docs/rules/comma-dangle
-		'comma-dangle': ['error', 'always-multiline'],
+		'comma-dangle': ['error', {
+			'arrays': 'always-multiline',
+			'objects': 'always-multiline',
+			'imports': 'always-multiline',
+			'exports': 'always-multiline',
+			'functions': 'always-multiline',
+		}],
 
 		// Disallow Yoda Conditions
 		// http://eslint.org/docs/rules/yoda

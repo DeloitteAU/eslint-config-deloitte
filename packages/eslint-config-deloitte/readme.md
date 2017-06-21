@@ -1,15 +1,8 @@
 ![Deloitte Digital](https://raw.githubusercontent.com/DeloitteDigital/DDBreakpoints/master/docs/deloittedigital-logo-white.png)
 
-# Deloitte eslint configs
+# eslint-config-deloitte
 
-These package provide Deloitte Digital's code standards as ESLint extensible configs.
-
-## Table of contents
-
-- [Installation for ES6 projects](#installation-for-es6-projects)
-- [Installation for ES6 + React projects](https://github.com/DeloitteDigitalAPAC/eslint-config-deloitte/tree/master/packages/eslint-config-deloitte-react)
-- [Installation for ES5 projects](#installation-for-es5-projects)
-
+This package provides Deloitte Digital's code standards as an ESLint extensible config.
 
 ## Installation for ES6 projects
 

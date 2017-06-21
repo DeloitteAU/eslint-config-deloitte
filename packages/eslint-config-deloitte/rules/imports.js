@@ -15,7 +15,7 @@ module.exports = {
 	settings: {
 		'import/resolver': {
 			node: {
-				extensions: ['.js', '.json']
+				extensions: ['.js', '.json', '.jsx']
 			}
 		},
 		'import/extensions': [
@@ -27,7 +27,7 @@ module.exports = {
 		'import/ignore': [
 			'node_modules',
 			'\\.(coffee|scss|css|less|hbs|svg|json)$'
-		]
+		],
 	},
 
 	rules: {
@@ -35,7 +35,7 @@ module.exports = {
 
 		// ensure imports point to files/modules that can be resolved
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
-		'import/no-unresolved': ['error', { commonjs: true }],
+		'import/no-unresolved': 'off',
 
 		// ensure named imports coupled with named exports
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md#when-not-to-use-it
