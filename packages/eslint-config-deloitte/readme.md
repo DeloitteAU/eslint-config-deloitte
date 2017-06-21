@@ -12,7 +12,9 @@ npm install --save-dev eslint-config-deloitte
 
 ### Usage
 
-Add `"extends": ["eslint-config-deloitte"]` to your `.eslintrc.js` file:
+Add `"extends": ["eslint-config-deloitte"]` to your `.eslintrc.js` file.
+
+**Example:**
 
 ```js
 module.exports = {
@@ -33,7 +35,9 @@ npm install --save-dev eslint-config-deloitte
 
 ### Usage
 
-Add `"extends": ["eslint-config-deloitte/legacy"]` to your `.eslintrc.js` file:
+Add `"extends": ["eslint-config-deloitte/legacy"]` to your `.eslintrc.js` file.
+
+**Example:**
 
 ```js
 module.exports = {

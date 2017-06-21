@@ -12,7 +12,9 @@ npm install --save-dev eslint-config-deloitte-react
 
 ### Usage
 
-Add `"extends": ["eslint-config-deloitte-react"]` to your `.eslintrc.js` file:
+Add `"extends": ["eslint-config-deloitte-react"]` to your `.eslintrc.js` file.
+
+**Example:**
 
 ```js
 module.exports = {
