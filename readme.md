@@ -5,7 +5,7 @@
 These packages provides Deloitte Digital's code standards as an ESLint extensible config.
 
 - [Installation for ES6 projects](#installation-for-es6-projects)
-- [Installation for ES6 + React projects](#installation-for-es6+react-projects)
+- [Installation for ES6 + React projects](#installation-for-es6--react-projects)
 - [Installation for ES5 projects](#installation-for-es5-projects)
 
 ## Installation for ES6 projects
