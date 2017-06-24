@@ -1,8 +1,8 @@
 module.exports = {
 	extends: [
-		'./index'
+		'./index',
 	].map(require.resolve),
 	env: {
-		node: true
-	}
+		node: true,
+	},
 };

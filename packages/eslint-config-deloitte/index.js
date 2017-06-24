@@ -3,5 +3,5 @@ module.exports = {
 		'./rules/best-practices',
 		'./rules/es6',
 		'./rules/imports',
-	].map(require.resolve)
+	].map(require.resolve),
 };

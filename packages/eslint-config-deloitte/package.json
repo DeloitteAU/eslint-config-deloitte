@@ -4,7 +4,8 @@
   "description": "This package provides Deloitte Digital's code standards as an ESLint extensible config",
   "main": "./index.js",
   "scripts": {
-    "lint": "eslint --config node.js \"**/*.js\""
+    "lint": "eslint --config node.js \"**/*.js\"",
+    "prepublish": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -24,10 +25,10 @@
   "license": "BSD-3-Clause",
   "devDependencies": {
     "eslint": "^3.19.0",
-		"eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-import": "^2.2.0"
   },
   "peerDependencies": {
     "eslint": "^3.19.0",
-		"eslint-plugin-import": "^2.2.0"
+    "eslint-plugin-import": "^2.2.0"
   }
 }

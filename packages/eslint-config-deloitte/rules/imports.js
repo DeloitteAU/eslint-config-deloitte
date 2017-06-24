@@ -1,32 +1,32 @@
 module.exports = {
 	env: {
-		es6: true
+		es6: true,
 	},
 
 	parserOptions: {
 		ecmaVersion: 6,
-		sourceType: 'module'
+		sourceType: 'module',
 	},
 
 	plugins: [
-		'import'
+		'import',
 	],
 
 	settings: {
 		'import/resolver': {
 			node: {
-				extensions: ['.js', '.json', '.jsx']
-			}
+				extensions: ['.js', '.json', '.jsx'],
+			},
 		},
 		'import/extensions': [
 			'.js',
-			'.jsx'
+			'.jsx',
 		],
 		'import/core-modules': [
 		],
 		'import/ignore': [
 			'node_modules',
-			'\\.(coffee|scss|css|less|hbs|svg|json)$'
+			'\\.(coffee|scss|css|less|hbs|svg|json)$',
 		],
 	},
 
@@ -70,7 +70,7 @@ module.exports = {
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
 		'import/no-extraneous-dependencies': ['error', {
 			devDependencies: false,
-			optionalDependencies: false
+			optionalDependencies: false,
 		}],
 
 		// Forbid mutable exports
@@ -114,7 +114,7 @@ module.exports = {
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
 		'import/order': ['off', {
 			'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-			'newlines-between': 'never'
+			'newlines-between': 'never',
 		}],
 
 		// Require a newline after the last import/require in a group
@@ -135,6 +135,6 @@ module.exports = {
 
 		// Forbid import of modules using absolute paths
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
-		'import/no-absolute-path': ['off']
-	}
+		'import/no-absolute-path': ['off'],
+	},
 };

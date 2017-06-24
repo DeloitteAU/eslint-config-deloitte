@@ -1,11 +1,11 @@
 module.exports = {
 	env: {
-		browser: true
+		browser: true,
 	},
 
 	globals: {
 		DDIGITAL: true,
-		DD: true
+		DD: true,
 	},
 
 	rules: {
@@ -20,7 +20,7 @@ module.exports = {
 		// Require Camelcase
 		// http://eslint.org/docs/rules/camelcase
 		'camelcase': ['error', {
-			properties: 'never'
+			properties: 'never',
 		}],
 
 		// Require Following Curly Brace Conventions
@@ -30,7 +30,7 @@ module.exports = {
 		// Require === and !==
 		// http://eslint.org/docs/rules/eqeqeq
 		'eqeqeq': ['error', 'always', {
-			'null': 'ignore' // eslint-disable-line quote-props
+			'null': 'ignore', // eslint-disable-line quote-props
 		}],
 
 		// Require Guarding for-in
@@ -56,13 +56,13 @@ module.exports = {
 		// Disallow empty block statements
 		// http://eslint.org/docs/rules/no-empty
 		'no-empty': ['error', {
-			allowEmptyCatch: true
+			allowEmptyCatch: true,
 		}],
 
 		// Disallow the unary operators ++ and --
 		// http://eslint.org/docs/rules/no-plusplus
 		'no-plusplus': ['error', {
-			allowForLoopAfterthoughts: true
+			allowForLoopAfterthoughts: true,
 		}],
 
 		// Enforce the consistent use of single quotes
@@ -106,14 +106,14 @@ module.exports = {
 		// http://eslint.org/docs/rules/key-spacing
 		'key-spacing': ['error', {
 			beforeColon: false,
-			afterColon: true
+			afterColon: true,
 		}],
 
 		// Require or disallow spaces before/after unary operators
 		// http://eslint.org/docs/rules/space-unary-ops
 		'space-unary-ops': ['error', {
 			words: false,
-			nonwords: false
+			nonwords: false,
 		}],
 
 		// Disallow mixed spaces and tabs for indentation
@@ -127,11 +127,11 @@ module.exports = {
 		// Require or disallow trailing commas
 		// http://eslint.org/docs/rules/comma-dangle
 		'comma-dangle': ['error', {
-			'arrays': 'always-multiline',
-			'objects': 'always-multiline',
-			'imports': 'always-multiline',
-			'exports': 'always-multiline',
-			'functions': 'always-multiline',
+			arrays: 'always-multiline',
+			objects: 'always-multiline',
+			imports: 'always-multiline',
+			exports: 'always-multiline',
+			functions: 'always-multiline',
 		}],
 
 		// Disallow Yoda Conditions
@@ -185,13 +185,13 @@ module.exports = {
 		// Enforce consistent indentation
 		// http://eslint.org/docs/rules/indent
 		'indent': ['error', 'tab', {
-			SwitchCase: 1
+			SwitchCase: 1,
 		}],
 
 		// Require Brace Style
 		// http://eslint.org/docs/rules/brace-style
 		'brace-style': ['warn', '1tbs', {
-			allowSingleLine: true
-		}]
-	}
+			allowSingleLine: true,
+		}],
+	},
 };
