@@ -116,6 +116,13 @@ module.exports = {
 			nonwords: false,
 		}],
 
+		// Require space after colons of case and default clauses in switch statements
+		// http://eslint.org/docs/rules/switch-colon-spacing
+		'switch-colon-spacing': ['error', {
+			after: true,
+			before: false,
+		}],
+
 		// Disallow mixed spaces and tabs for indentation
 		// http://eslint.org/docs/rules/no-mixed-spaces-and-tabs'
 		'no-mixed-spaces-and-tabs': 'error',
