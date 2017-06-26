@@ -1,12 +1,12 @@
 module.exports = {
-  plugins: [
-    'react',
-  ],
+	plugins: [
+		'react',
+	],
 
 	parserOptions: {
 		ecmaFeatures: {
-			'jsx': true
-		}
+			jsx: true,
+		},
 	},
 
 	rules: {
@@ -152,8 +152,8 @@ module.exports = {
 
 		// Enforce component methods order
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
-		'react/sort-comp': ['error', { order:
-			[
+		'react/sort-comp': ['error', {
+			order: [
 				'static-methods',
 				'/^(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
 				'lifecycle',
@@ -161,8 +161,8 @@ module.exports = {
 				'everything-else',
 				'/^handle.+$/',
 				'/^render.+$/',
-				'render'
-			]
+				'render',
+			],
 		}],
 
 		// Enforce propTypes declarations alphabetical sorting
@@ -255,7 +255,7 @@ module.exports = {
 
 		// Disallow undeclared variables in JSX
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
-		'react/jsx-no-undef': ['warn', { 'allowGlobals': true }],
+		'react/jsx-no-undef': ['warn', { allowGlobals: true }],
 
 		// Enforce PascalCase for user-defined JSX components
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
@@ -270,7 +270,7 @@ module.exports = {
 		'react/jsx-tag-spacing': ['error', {
 			closingSlash: 'never',
 			beforeSelfClosing: 'always',
-			afterOpening: 'never'
+			afterOpening: 'never',
 		}],
 
 		// Prevent React to be incorrectly marked as unused
@@ -288,6 +288,6 @@ module.exports = {
 			assignment: true,
 			return: true,
 			arrow: true,
-		}]
-	}
+		}],
+	},
 };

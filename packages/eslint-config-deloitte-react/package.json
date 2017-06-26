@@ -16,7 +16,7 @@
     "config",
     "deloitte",
     "styleguide",
-		"react"
+    "react"
   ],
   "engines": {
     "node": ">= 4"
@@ -28,13 +28,14 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^7.1.0"
   },
-	"dependencies": {
-		"eslint-config-deloitte": "^2.0.0"
-	},
+  "dependencies": {
+    "eslint-config-deloitte": "^2.0.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3"
+  },
   "peerDependencies": {
     "eslint": "^3.19.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^7.1.0",
-		"eslint-plugin-jsx-a11y": "^5.0.0"
+    "eslint-plugin-jsx-a11y": "^5.0.0"
   }
 }

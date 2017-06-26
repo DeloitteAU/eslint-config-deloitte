@@ -1,13 +1,13 @@
 module.exports = {
 	plugins: [
-    'react',
-		'jsx-a11y'
-  ],
+		'react',
+		'jsx-a11y',
+	],
 
 	parserOptions: {
 		ecmaFeatures: {
-			'jsx': true
-		}
+			jsx: true,
+		},
 	},
 
 	rules: {
@@ -171,5 +171,5 @@ module.exports = {
 		// Enforce tabIndex value is not greater than zero
 		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/tabindex-no-positive.md
 		'jsx-a11y/tabindex-no-positive': 'off',
-	}
+	},
 };

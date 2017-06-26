@@ -8,5 +8,5 @@ install:
   - cd ${TRAVIS_BUILD_DIR}/packages/eslint-config-deloitte && npm install && npm-install-peers
   - cd ${TRAVIS_BUILD_DIR}/packages/eslint-config-deloitte-react && npm install && npm-install-peers
 script:
-  - cd ${TRAVIS_BUILD_DIR}/packages/eslint-config-deloitte &&  && npm run lint
+  - cd ${TRAVIS_BUILD_DIR}/packages/eslint-config-deloitte && npm run lint
   - cd ${TRAVIS_BUILD_DIR}/packages/eslint-config-deloitte-react && npm run lint

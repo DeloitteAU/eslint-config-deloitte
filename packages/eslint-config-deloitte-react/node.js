@@ -1,6 +1,8 @@
 module.exports = {
 	extends: [
-		'./index',
+		'../eslint-config-deloitte',
+		'./rules/react',
+		'./rules/jsx-a11y',
 	].map(require.resolve),
 	env: {
 		node: true,
