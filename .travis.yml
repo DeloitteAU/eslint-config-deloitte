@@ -4,8 +4,8 @@ node_js:
   - "7"
 sudo: false
 install:
-  - cd packages/eslint-config-deloitte && npm install
-  - cd packages/eslint-config-deloitte-react && npm install
+  - cd ${TRAVIS_BUILD_DIR}/packages/eslint-config-deloitte && npm install
+  - cd ${TRAVIS_BUILD_DIR}/packages/eslint-config-deloitte-react && npm install
 script:
-  - cd packages/eslint-config-deloitte && npm run lint
-  - cd packages/eslint-config-deloitte-react && npm run lint
+  - cd ${TRAVIS_BUILD_DIR}/packages/eslint-config-deloitte && npm run lint
+  - cd ${TRAVIS_BUILD_DIR}/packages/eslint-config-deloitte-react && npm run lint
