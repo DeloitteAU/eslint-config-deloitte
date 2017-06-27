@@ -1,6 +1,7 @@
 ![Deloitte Digital](https://raw.githubusercontent.com/DeloitteDigital/DDBreakpoints/master/docs/deloittedigital-logo-white.png)
 
-# Deloitte ESlint configs
+# Deloitte ESlint configs ![Build Status](https://travis-ci.org/DeloitteDigitalAPAC/eslint-config-deloitte.svg?branch=master)
+
 
 These packages provides Deloitte Digital's code standards as an ESLint extensible config.
 
