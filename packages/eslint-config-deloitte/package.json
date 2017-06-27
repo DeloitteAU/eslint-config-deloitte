@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-deloitte",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "This package provides Deloitte Digital's code standards as an ESLint extensible config",
   "main": "./index.js",
   "scripts": {
@@ -24,11 +24,11 @@
   "author": "Deloitte Digital Australia (http://deloittedigital.com.au)",
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-plugin-import": "^2.2.0"
+    "eslint": "^4.1.0",
+    "eslint-plugin-import": "^2.6.0"
   },
   "peerDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-plugin-import": "^2.2.0"
+    "eslint": "^4.1.0",
+    "eslint-plugin-import": "^2.6.0"
   }
 }

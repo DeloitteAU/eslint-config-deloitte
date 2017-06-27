@@ -1,4 +1,9 @@
-## eslint Config Deloitte Change log
+## ESLint Config Deloitte Changelog
+
+### [3.0.0]
+
+- Upgraded ESLint to version 4.1
+- Added switch-colon-spacing rule, a new ESLint 4 rule.
 
 ### [2.0.0]
 
