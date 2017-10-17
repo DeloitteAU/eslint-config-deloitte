@@ -15,16 +15,11 @@ module.exports = {
 	rules: {
 		// enforces no braces where they can be omitted
 		// http://eslint.org/docs/rules/arrow-body-style
-		// TODO: enable requireReturnForObjectLiteral?
-		'arrow-body-style': ['error', 'as-needed', {
-			requireReturnForObjectLiteral: false,
-		}],
+		'arrow-body-style': 'off',
 
 		// require parens in arrow function arguments
 		// http://eslint.org/docs/rules/arrow-parens
-		'arrow-parens': ['error', 'as-needed', {
-			requireForBlockBody: true,
-		}],
+		'arrow-parens': ['error', 'as-needed'],
 
 		// require space before/after arrow function's arrow
 		// http://eslint.org/docs/rules/arrow-spacing
