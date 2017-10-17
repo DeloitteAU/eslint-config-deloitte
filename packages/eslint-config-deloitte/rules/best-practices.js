@@ -98,7 +98,7 @@ module.exports = {
 		// http://eslint.org/docs/rules/space-in-parens
 		'space-in-parens': ['error', 'never'],
 
-		// Require quotes around object literal property names
+		// Enforce consistent object literal property names
 		// http://eslint.org/docs/rules/quote-props
 		'quote-props': ['error', 'consistent-as-needed'],
 
@@ -179,7 +179,15 @@ module.exports = {
 
 		// Enforce consistent spacing before and after keywords
 		// http://eslint.org/docs/rules/keyword-spacing
-		'keyword-spacing': ['error', {}],
+		'keyword-spacing': ['error', {
+			before: true,
+			after: true,
+			overrides: {
+				return: { after: true },
+				throw: { after: true },
+				case: { after: true },
+			},
+		}],
 
 		// Require Consistent This
 		// http://eslint.org/docs/rules/consistent-this
