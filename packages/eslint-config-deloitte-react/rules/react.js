@@ -231,8 +231,8 @@ module.exports = {
 		// Prevent usage of .bind() and arrow functions in JSX props
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
 		'react/jsx-no-bind': ['error', {
-			ignoreRefs: false,
-			allowArrowFunctions: false,
+			ignoreRefs: true,
+			allowArrowFunctions: true,
 			allowBind: false,
 		}],
 
@@ -289,5 +289,20 @@ module.exports = {
 			return: true,
 			arrow: true,
 		}],
+
+		// Enforces consistent naming for boolean props
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
+		'react/boolean-prop-naming': ['off', {
+			propTypeNames: ['bool', 'mutuallyExclusiveTrueProps'],
+			rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+',
+		}],
+
+		// Prevents common typos
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-typos.md
+		'react/no-typos': 'error',
+
+		// Enforce curly braces or disallow unnecessary curly braces in JSX props and/or children
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md
+		'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
 	},
 };

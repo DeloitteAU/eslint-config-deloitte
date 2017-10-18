@@ -51,10 +51,6 @@ module.exports = {
 		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/heading-has-content.md
 		'jsx-a11y/heading-has-content': 'error',
 
-		// Enforce an anchor element's href prop value is not just #
-		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/href-no-hash.md
-		'jsx-a11y/href-no-hash': 'error',
-
 		// Enforce <html> element has lang prop
 		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/html-has-lang.md
 		'jsx-a11y/html-has-lang': 'warn',
@@ -171,5 +167,17 @@ module.exports = {
 		// Enforce tabIndex value is not greater than zero
 		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/tabindex-no-positive.md
 		'jsx-a11y/tabindex-no-positive': 'off',
+
+		// Warning if missing htmlFor attribute
+		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-for.md
+		'jsx-a11y/label-has-for': ['warn', { components: ['label'], allowChildren: true }],
+
+		// ensure anchor tags are valid and favour buttons
+		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md
+		'jsx-a11y/anchor-is-valid': ['error', {
+			components: ['Link'],
+			specialLink: [],
+			aspects: ['noHref', 'invalidHref', 'preferButton'],
+		}],
 	},
 };
