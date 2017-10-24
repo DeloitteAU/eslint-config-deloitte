@@ -9,6 +9,8 @@ These packages provides Deloitte Digital's code standards as an ESLint extensibl
 - [Installation for ES6 + React projects](#installation-for-es6--react-projects)
 - [Installation for ES5 projects](#installation-for-es5-projects)
 
+> Please note: If you are using Types such as Flow or experimental features not supported in ESLint itself yet such as decorators. Please additionally [configure the babel-parser](#babel-parser-installation).
+
 ## Installation for ES6 projects
 
 ```bash
@@ -79,6 +81,13 @@ module.exports = {
 };
 ```
 
+## Babel Parser Installation
+
+If you are using Types such as [Flow](https://github.com/facebook/flow) or experimental features not supported in ESLint itself yet such as decorators.
+
+Add `"parser": "babel-eslint"` to your `.eslintrc.js` file. Then `npm install babel-eslint --save-dev`
+
+Read more about configuring this package [here](https://github.com/babel/babel-eslint).
 
 ## Who is Deloitte Digital?
 
