@@ -1,5 +1,9 @@
 ## ESLint Config Deloitte Changelog
 
+### [3.1.1]
+
+- Fixed duplicate of `jsx-a11y/label-has-for` rule
+
 ### [3.1.0]
 
 - Added npm lock files
