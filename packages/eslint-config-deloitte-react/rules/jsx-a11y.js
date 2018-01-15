@@ -67,10 +67,6 @@ module.exports = {
 		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/interactive-supports-focus.md
 		'jsx-a11y/interactive-supports-focus': 'off',
 
-		// Enforce that <label> elements have the htmlFor prop
-		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-for.md
-		'jsx-a11y/label-has-for': 'error',
-
 		// Enforce lang attribute has a valid value
 		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/lang.md
 		'jsx-a11y/lang': 'error',
