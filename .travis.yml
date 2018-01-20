@@ -1,12 +1,10 @@
 ---
 language: node_js
 node_js:
-  - "7"
+  - "8.7"
 sudo: false
 install:
-  - npm install npm-install-peers -g
-  - cd ${TRAVIS_BUILD_DIR}/packages/eslint-config-deloitte && npm install && npm-install-peers
-  - cd ${TRAVIS_BUILD_DIR}/packages/eslint-config-deloitte-react && npm install && npm-install-peers
+  - npm install && npm run bootstrap
 script:
-  - cd ${TRAVIS_BUILD_DIR}/packages/eslint-config-deloitte && npm run lint
-  - cd ${TRAVIS_BUILD_DIR}/packages/eslint-config-deloitte-react && npm run lint
+  - cd ${TRAVIS_BUILD_DIR} && npm run test
+
