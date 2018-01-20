@@ -1,0 +1,22 @@
+{
+  "name": "eslint-config-deloitte",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^2.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeloitteDigitalAPAC/eslint-config-deloitte.git"
+  },
+  "author": "Deloitte Digital AU",
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "bootstrap": "./node_modules/.bin/lerna run test",
+    "publish": "./node_modules/.bin/lerna publish",
+    "test": "./node_modules/.bin/lerna run test"
+  },
+  "bugs": {
+    "url": "https://github.com/DeloitteDigitalAPAC/eslint-config-deloitte/issues"
+  },
+  "homepage": "https://github.com/DeloitteDigitalAPAC/eslint-config-deloitte#readme"
+}
