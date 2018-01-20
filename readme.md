@@ -5,8 +5,8 @@
 
 These packages provides Deloitte Digital's code standards as an ESLint extensible config.
 
-- [Installation for ES6 projects](#installation-for-es6-projects)
-- [Installation for ES6 + React projects](#installation-for-es6--react-projects)
+- [Installation for ES6+ projects](#installation-for-es6-projects)
+- [Installation for ES6+ React projects](#installation-for-es6-react-projects)
 - [Installation for ES5 projects](#installation-for-es5-projects)
 
 > Please note: If you are using Types such as Flow or experimental features not supported in ESLint itself yet such as decorators. Please additionally [configure the babel-parser](#babel-parser-installation).
@@ -34,7 +34,7 @@ module.exports = {
 };
 ```
 
-## Installation for ES6 + React projects
+## Installation for ES6+ React projects
 
 ```bash
 npm install --save-dev eslint-config-deloitte-react
