@@ -2,6 +2,7 @@
 
 ### [UNPUBLISHED]
 
+- Added ECMAScript 2017 support
 - Added lerna to manage our packages
 - Added contributing readme
 - Added .nvmrc to promote node 8.7

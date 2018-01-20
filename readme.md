@@ -5,13 +5,13 @@
 
 These packages provides Deloitte Digital's code standards as an ESLint extensible config.
 
-- [Installation for ES6+ projects](#installation-for-es6-projects)
-- [Installation for ES6+ React projects](#installation-for-es6-react-projects)
-- [Installation for ES5 projects](#installation-for-es5-projects)
+- [Installation for ECMAScript 6+ projects](#installation-for-ecmascript-6-projects)
+- [Installation for ECMAScript 6+ and React projects](#installation-for-ecmascript-6-and-react-projects)
+- [Installation for Legacy ES5 projects](#installation-for-es5-projects)
 
 > Please note: If you are using Types such as Flow or experimental features not supported in ESLint itself yet such as decorators. Please additionally [configure the babel-parser](#babel-parser-installation).
 
-## Installation for ES6 projects
+## Installation for ECMAScript 6+ projects
 
 ```bash
 npm install --save-dev eslint-config-deloitte
@@ -28,13 +28,10 @@ module.exports = {
 	extends: [
 		'eslint-config-deloitte'
 	],
-	globals: {
-		clientX: true
-	}
 };
 ```
 
-## Installation for ES6+ React projects
+## Installation for ECMAScript 6+ and React projects
 
 ```bash
 npm install --save-dev eslint-config-deloitte-react
@@ -50,15 +47,12 @@ Add `"extends": ["eslint-config-deloitte-react"]` to your `.eslintrc.js` file.
 module.exports = {
 	extends: [
 		'eslint-config-deloitte-react'
-	],
-	globals: {
-		clientX: true
-	}
+	]
 };
 ```
 
 
-## Installation for ES5 projects
+## Installation for legacy ES5 projects
 
 ```bash
 npm install --save-dev eslint-config-deloitte
@@ -74,10 +68,7 @@ Add `"extends": ["eslint-config-deloitte/legacy"]` to your `.eslintrc.js` file.
 module.exports = {
 	extends: [
 		'eslint-config-deloitte/legacy'
-	],
-	globals: {
-		clientX: true
-	}
+	]
 };
 ```
 
