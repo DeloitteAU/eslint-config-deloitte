@@ -7,7 +7,7 @@ These packages provides Deloitte Digital's code standards as an ESLint extensibl
 
 - [Installation for ECMAScript 6+ projects](#installation-for-ecmascript-6-projects)
 - [Installation for ECMAScript 6+ and React projects](#installation-for-ecmascript-6-and-react-projects)
-- [Installation for Legacy ES5 projects](#installation-for-es5-projects)
+- [Installation for Legacy ES5 projects](#installation-for-legacy-es5-projects)
 
 > Please note: If you are using Types such as Flow or experimental features not supported in ESLint itself yet such as decorators. Please additionally [configure the babel-parser](#babel-parser-installation).
 
