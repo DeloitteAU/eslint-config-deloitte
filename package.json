@@ -11,7 +11,7 @@
   "author": "Deloitte Digital AU",
   "license": "BSD-3-Clause",
   "scripts": {
-    "bootstrap": "./node_modules/.bin/lerna run test",
+    "bootstrap": "./node_modules/.bin/lerna bootstrap",
     "publish": "./node_modules/.bin/lerna publish",
     "test": "./node_modules/.bin/lerna run test"
   },
