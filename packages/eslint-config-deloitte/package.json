@@ -5,6 +5,7 @@
   "main": "./index.js",
   "scripts": {
     "lint": "eslint --config node.js \"**/*.js\"",
+    "test": "npm run lint",
     "prepublishOnly": "npm run lint"
   },
   "repository": {

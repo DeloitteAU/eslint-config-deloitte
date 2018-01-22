@@ -1,5 +1,13 @@
 ## ESLint Config Deloitte Changelog
 
+### [UNPUBLISHED]
+
+- Added ECMAScript 2017 support
+- Added lerna to manage our packages
+- Added contributing readme
+- Added .nvmrc to promote node 8.7
+- Updated travis build config and node version
+
 ### [3.1.1]
 
 - Fixed duplicate of `jsx-a11y/label-has-for` rule
