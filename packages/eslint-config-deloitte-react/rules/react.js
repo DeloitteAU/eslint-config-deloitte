@@ -328,7 +328,7 @@ module.exports = {
 		// Validate JSX maximum depth
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-depth.md
 		'react/jsx-max-depth': ['warn', {
-			'max': 8
-		}]
+			max: 8,
+		}],
 	},
 };
