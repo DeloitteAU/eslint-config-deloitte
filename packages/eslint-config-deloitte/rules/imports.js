@@ -137,5 +137,17 @@ module.exports = {
 		// Forbid import of modules using absolute paths
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
 		'import/no-absolute-path': ['off'],
+
+		// This rule enforces that all exports are declared at the bottom of the file
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/exports-last.md
+		'import/exports-last': 'off',
+
+		// Reports when named exports are not grouped together in a single export declaration
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/group-exports.md
+		'import/group-exports': 'off',
+
+		// Prohibit default exports
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-default-export.md
+		'import/no-default-export': 'off'
 	},
 };

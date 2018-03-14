@@ -7,6 +7,22 @@
 - Added contributing readme
 - Added .nvmrc to promote node 8.7
 - Updated travis build config and node version
+- Upgraded eslint 4.18
+- Upgraded eslint-plugin-import to 2.9
+- Upgraded eslint-plugin-react to 7.7
+- Added `react/button-has-type` rule
+- Added `react/no-this-in-sfc` rule
+- Added `react/jsx-child-element-spacing` rule
+- Added `react/jsx-max-depth` rule
+- Updated `react/prefer-stateless-function` to off
+- Updated `jsx-a11y/anchor-is-valid` to off
+- Updated `react/jsx-key` from error to warn
+- Updated `react/jsx-curly-brace-presence` to off
+- Updated `react/jsx-no-bind` from error to warn
+- Updated `react/jsx-filename-extension` from error to warn and now expects `.js`
+- Updated `react/self-closing-comp` from error to warn
+- Updated `react/no-array-index-key` from error to warn
+- Updated `object-shorthand` from error to off
 
 ### [3.1.1]
 
