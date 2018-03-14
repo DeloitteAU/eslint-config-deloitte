@@ -148,6 +148,6 @@ module.exports = {
 
 		// Prohibit default exports
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-default-export.md
-		'import/no-default-export': 'off'
+		'import/no-default-export': 'off',
 	},
 };
