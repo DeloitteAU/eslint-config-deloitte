@@ -2,6 +2,8 @@
 
 ### [UNPUBLISHED]
 
+### [3.2.0]
+
 - Added ECMAScript 2017 support
 - Added lerna to manage our packages
 - Added contributing readme
