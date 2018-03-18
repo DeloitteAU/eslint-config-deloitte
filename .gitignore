@@ -1,4 +1,5 @@
 node_modules
+lerna-debug.log
 
 # Ignore .DS_store file
 .DS_Store

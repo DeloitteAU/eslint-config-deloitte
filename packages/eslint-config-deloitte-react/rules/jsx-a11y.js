@@ -170,10 +170,6 @@ module.exports = {
 
 		// ensure anchor tags are valid and favour buttons
 		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md
-		'jsx-a11y/anchor-is-valid': ['error', {
-			components: ['Link'],
-			specialLink: [],
-			aspects: ['noHref', 'invalidHref', 'preferButton'],
-		}],
+		'jsx-a11y/anchor-is-valid': 'off',
 	},
 };

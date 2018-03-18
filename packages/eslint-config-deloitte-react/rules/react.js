@@ -40,7 +40,7 @@ module.exports = {
 
 		// Prevent usage of Array index in keys
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md
-		'react/no-array-index-key': 'error',
+		'react/no-array-index-key': 'warn',
 
 		// Prevent passing children as props
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md
@@ -124,7 +124,7 @@ module.exports = {
 
 		// Enforce stateless React Components to be written as a pure function
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
-		'react/prefer-stateless-function': ['error', { ignorePureComponents: true }],
+		'react/prefer-stateless-function': 'off',
 
 		// Prevent missing props validation in a React component definition
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
@@ -148,7 +148,7 @@ module.exports = {
 
 		// Prevent extra closing tags for components without children (fixable)
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
-		'react/self-closing-comp': 'error',
+		'react/self-closing-comp': 'warn',
 
 		// Enforce component methods order
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
@@ -199,7 +199,7 @@ module.exports = {
 
 		// Restrict file extensions that may contain JSX
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
-		'react/jsx-filename-extension': ['error', { extensions: ['.jsx'] }],
+		'react/jsx-filename-extension': ['warn', { extensions: ['.js'] }],
 
 		// Configure the position of the first property
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
@@ -222,7 +222,7 @@ module.exports = {
 
 		// Validate JSX has key prop when in array or iterator
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
-		'react/jsx-key': 'error',
+		'react/jsx-key': 'warn',
 
 		// Limit maximum of props on a single line in JSX
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
@@ -230,7 +230,7 @@ module.exports = {
 
 		// Prevent usage of .bind() and arrow functions in JSX props
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
-		'react/jsx-no-bind': ['error', {
+		'react/jsx-no-bind': ['warn', {
 			ignoreRefs: true,
 			allowArrowFunctions: true,
 			allowBind: false,
@@ -303,6 +303,32 @@ module.exports = {
 
 		// Enforce curly braces or disallow unnecessary curly braces in JSX props and/or children
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md
-		'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
+		'react/jsx-curly-brace-presence': 'off',
+
+		// Enforce consistent usage of destructuring assignment of props, state, and context
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
+		'react/destructuring-assignment': 'off',
+
+		// Prevent using this.state within a this.setState
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-access-state-in-setstate.md
+		'react/no-access-state-in-setstate': 'warn',
+
+		// Prevent usage of button elements without an explicit type attribute
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md
+		'react/button-has-type': 'error',
+
+		// Prevent this from being used in stateless functional components
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-this-in-sfc.md
+		'react/no-this-in-sfc': 'error',
+
+		// Enforce or disallow spaces inside of curly braces in JSX attributes and expressions.
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-child-element-spacing.md
+		'react/jsx-child-element-spacing': 'warn',
+
+		// Validate JSX maximum depth
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-depth.md
+		'react/jsx-max-depth': ['warn', {
+			max: 8,
+		}],
 	},
 };
