@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-deloitte",
+  "name": "eslint-config-deloitte-publisher",
   "private": true,
   "devDependencies": {
     "lerna": "^2.9.0"
