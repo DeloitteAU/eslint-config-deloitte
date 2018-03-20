@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-deloitte",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "description": "This package provides Deloitte Digital's code standards as an ESLint extensible config",
   "main": "./index.js",
   "scripts": {

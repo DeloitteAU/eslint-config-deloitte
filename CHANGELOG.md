@@ -2,6 +2,12 @@
 
 ### [UNPUBLISHED]
 
+### [3.3.1]
+
+- Added overrides for Webpack, ESLint, Stylelint and Karma configuration files, to set the Node environment variable to true
+- Updated the linting of this project
+- Added documentation for publishing to npm
+
 ### [3.3.0]
 
 - Added ECMAScript 2017 support
