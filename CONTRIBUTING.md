@@ -1,19 +1,16 @@
-# Contributing to eslint-config-deloitte
+# Contributing to ESLint Config Deloitte
 
-> **Please note** while contributions are welcome, these configurations are being published with our use cases in mind 
-and are opinionated by our engineers. We may not accept *feature* pull requests unless they are aligned with our needs.
+> **Please note** while contributions are welcome, these configurations are being published with our use cases in mind and are opinionated by our engineers. We may not accept *feature* pull requests unless they are aligned with our needs.
 
-To get started please [fork](https://github.com/DeloitteDigitalAPAC/eslint-config-deloitte#fork-destination-box) 
-this code on github.
+To get started please [fork](https://github.com/DeloitteDigitalAPAC/eslint-config-deloitte#fork-destination-box) this code on Github.
 
 At the root; run `npm install && npm run bootstrap`.
 
 ## Code structure
 
-Currently the source is separated by ECMA version and technology. You will find the individual modules in the
-`packages` folder. These are published independently which is all facilitated by [lerna](https://github.com/lerna/lerna).  
+Currently the source is separated by ECMA version and technology. You will find the individual modules in the `packages` folder. These are published independently which is all facilitated by [lerna](https://github.com/lerna/lerna).
 
-## Commands
+## Tests
 
 In order to run tests/lint:
 
@@ -21,8 +18,19 @@ In order to run tests/lint:
 npm run test
 ```
 
-In order to publish. (Please note we use [fixed versioning mode](https://github.com/lerna/lerna#fixedlocked-mode-default) with lerna)
+## Publishing
 
-```bash
-npm run publish
-```
+The project publishes two packages to npm:
+
+[eslint-config-deloitte](https://www.npmjs.com/package/eslint-config-deloitte)
+[eslint-config-deloitte-react](https://www.npmjs.com/package/eslint-config-deloitte-react)
+
+Instructions for publishing new releases:
+
+- Check out the `master` branch
+- Update the `CHANGELOG.md` file and commit
+- Do not manually change version numbers in `lerna.json` or `package.json` files (they are updated programatically)
+- Run Lerna's publish command, and pass in your One Time Password for npm as an environment variable: `NPM_CONFIG_OTP=yourtoken lerna publish`
+- Select the new version (or enter a custom one)
+
+Lerna will create a new release of the packages that have been updated. It will create a new git commit/tag and publish to npm.

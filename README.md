@@ -26,7 +26,7 @@ Add `"extends": ["eslint-config-deloitte"]` to your `.eslintrc.js` file.
 ```js
 module.exports = {
 	extends: [
-		'eslint-config-deloitte'
+		'eslint-config-deloitte',
 	],
 };
 ```
@@ -46,8 +46,8 @@ Add `"extends": ["eslint-config-deloitte-react"]` to your `.eslintrc.js` file.
 ```js
 module.exports = {
 	extends: [
-		'eslint-config-deloitte-react'
-	]
+		'eslint-config-deloitte-react',
+	],
 };
 ```
 
@@ -67,8 +67,8 @@ Add `"extends": ["eslint-config-deloitte/legacy"]` to your `.eslintrc.js` file.
 ```js
 module.exports = {
 	extends: [
-		'eslint-config-deloitte/legacy'
-	]
+		'eslint-config-deloitte/legacy',
+	],
 };
 ```
 
