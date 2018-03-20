@@ -11,4 +11,17 @@ module.exports = {
 			experimentalObjectRestSpread: true,
 		},
 	},
+	overrides: [
+		{
+			files: [
+				'.eslintrc.js',
+				'.stylelintrc.js',
+				'karma.conf.js',
+				'webpack.config.js',
+			],
+			env: {
+				node: true,
+			},
+		},
+	],
 };
