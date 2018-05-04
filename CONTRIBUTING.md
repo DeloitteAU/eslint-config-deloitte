@@ -22,8 +22,8 @@ npm run test
 
 The project publishes two packages to npm:
 
-[eslint-config-deloitte](https://www.npmjs.com/package/eslint-config-deloitte)
-[eslint-config-deloitte-react](https://www.npmjs.com/package/eslint-config-deloitte-react)
+[@deloitte-digital-au/eslint-config](https://www.npmjs.com/package/@deloitte-digital-au/eslint-config)
+[@deloitte-digital-au/eslint-config-react](https://www.npmjs.com/package/@deloitte-digital-au/eslint-config-react)
 
 Instructions for publishing new releases:
 

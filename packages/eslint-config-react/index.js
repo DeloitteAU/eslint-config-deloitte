@@ -1,6 +1,6 @@
 module.exports = {
 	extends: [
-		'eslint-config-deloitte',
+		'@deloitte-digital-au/eslint-config',
 		'./rules/react',
 		'./rules/jsx-a11y',
 	].map(require.resolve),

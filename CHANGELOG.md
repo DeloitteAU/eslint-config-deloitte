@@ -1,6 +1,10 @@
-## ESLint Config Deloitte Changelog
+## Changelog for Deloitte Digital's ESLint Config
 
 ### [UNPUBLISHED]
+
+### [3.4.0]
+
+- Packages are now scoped to `@deloitte-digital-au`
 
 ### [3.3.1]
 

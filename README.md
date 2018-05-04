@@ -1,6 +1,6 @@
 ![Deloitte Digital](https://raw.githubusercontent.com/DeloitteDigitalAPAC/eslint-config-deloitte/master/dd-logo.png)
 
-# ESLint Config Deloitte [![Build Status](https://travis-ci.org/DeloitteDigitalAPAC/eslint-config-deloitte.svg?branch=master)](https://travis-ci.org/DeloitteDigitalAPAC/eslint-config-deloitte)
+# Deloitte Digital's ESLint Config [![Build Status](https://travis-ci.org/DeloitteDigitalAPAC/eslint-config-deloitte.svg?branch=master)](https://travis-ci.org/DeloitteDigitalAPAC/eslint-config-deloitte)
 
 
 These packages provides Deloitte Digital's code standards as an ESLint extensible config.
@@ -14,19 +14,19 @@ These packages provides Deloitte Digital's code standards as an ESLint extensibl
 ## Installation for ECMAScript 6+ projects
 
 ```bash
-npm install --save-dev eslint-config-deloitte
+npm install --save-dev @deloitte-digital-au/eslint-config
 ```
 
 ### Usage
 
-Add `"extends": ["eslint-config-deloitte"]` to your `.eslintrc.js` file.
+Add `"extends": ["@deloitte-digital-au/eslint-config"]` to your `.eslintrc.js` file.
 
 **Example:**
 
 ```js
 module.exports = {
 	extends: [
-		'eslint-config-deloitte',
+		'@deloitte-digital-au/eslint-config',
 	],
 };
 ```
@@ -34,19 +34,19 @@ module.exports = {
 ## Installation for ECMAScript 6+ and React projects
 
 ```bash
-npm install --save-dev eslint-config-deloitte-react
+npm install --save-dev @deloitte-digital-au/eslint-config-react
 ```
 
 ### Usage
 
-Add `"extends": ["eslint-config-deloitte-react"]` to your `.eslintrc.js` file.
+Add `"extends": ["@deloitte-digital-au/eslint-config-react"]` to your `.eslintrc.js` file.
 
 **Example:**
 
 ```js
 module.exports = {
 	extends: [
-		'eslint-config-deloitte-react',
+		'@deloitte-digital-au/eslint-config-react',
 	],
 };
 ```
@@ -55,19 +55,19 @@ module.exports = {
 ## Installation for legacy ES5 projects
 
 ```bash
-npm install --save-dev eslint-config-deloitte
+npm install --save-dev @deloitte-digital-au/eslint-config
 ```
 
 ### Usage
 
-Add `"extends": ["eslint-config-deloitte/legacy"]` to your `.eslintrc.js` file.
+Add `"extends": ["@deloitte-digital-au/eslint-config/legacy"]` to your `.eslintrc.js` file.
 
 **Example:**
 
 ```js
 module.exports = {
 	extends: [
-		'eslint-config-deloitte/legacy',
+		'@deloitte-digital-au/eslint-config/legacy',
 	],
 };
 ```
