@@ -1,3 +1,1 @@
-# eslint-config-deloitte
-
-Please read the [installation instructions](https://github.com/DeloitteDigitalAPAC/eslint-config-deloitte) to configure this package.
+# eslint-config-deloitte has been renamed to @deloitte-digital-au/eslint-config

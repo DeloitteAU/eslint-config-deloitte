@@ -2,6 +2,10 @@
 
 ### [UNPUBLISHED]
 
+### [3.3.2]
+
+- Displays deprecation warning, with suggestion to migrate to scoped packages.
+
 ### [3.3.1]
 
 - Added overrides for Webpack, ESLint, Stylelint and Karma configuration files, to set the Node environment variable to true

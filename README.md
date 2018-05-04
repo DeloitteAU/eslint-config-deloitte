@@ -1,3 +1,6 @@
+# eslint-config-deloitte has been renamed to @deloitte-digital-au/eslint-config
+# eslint-config-deloitte-react has been renamed to @deloitte-digital-au/eslint-config-react
+
 ![Deloitte Digital](https://raw.githubusercontent.com/DeloitteDigitalAPAC/eslint-config-deloitte/master/dd-logo.png)
 
 # ESLint Config Deloitte [![Build Status](https://travis-ci.org/DeloitteDigitalAPAC/eslint-config-deloitte.svg?branch=master)](https://travis-ci.org/DeloitteDigitalAPAC/eslint-config-deloitte)
