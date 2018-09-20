@@ -2,6 +2,8 @@
 
 ### [UNPUBLISHED]
 
+- Enforce `async () => {}` instead of `async() => {}`.
+
 ### [3.4.0]
 
 - Packages are now scoped to `@deloitte-digital-au`
