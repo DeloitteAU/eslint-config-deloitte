@@ -88,7 +88,14 @@ module.exports = {
 
 		// Enforce consistent spacing before opening parenthesis in function definitions
 		// http://eslint.org/docs/rules/space-before-function-parentheses
-		'space-before-function-paren': ['error', 'never'],
+		'space-before-function-paren': [
+			'error',
+			{
+				anonymous: 'never',
+				named: 'never',
+				asyncArrow: 'always',
+			},
+		],
 
 		// Disallow or enforce spaces inside of brackets
 		// http://eslint.org/docs/rules/array-bracket-spacing
