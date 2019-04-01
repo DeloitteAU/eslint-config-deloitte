@@ -159,7 +159,7 @@ module.exports = {
 				'lifecycle',
 				'/^(get|set).+$/',
 				'everything-else',
-				'/^handle.+$/',
+				'/^_handle.+$/',
 				'/^render.+$/',
 				'render',
 			],
