@@ -1,3 +1,9 @@
+import _ from 'lodash';
+
+_.map([], t => t);
+
+throw Error('test');
+
 module.exports = {
 	overrides: [
 		{

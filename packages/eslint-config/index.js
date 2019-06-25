@@ -3,10 +3,8 @@ module.exports = {
 		'./rules/best-practices',
 		'./rules/es6',
 		'./rules/imports',
-	].map(require.resolve),
-	plugins: [
-		'eslint-plugin-you-dont-need-lodash-underscore',
-		'eslint-plugin-new-with-error',
+		'plugin:you-dont-need-lodash-underscore/all', //all rules set to error
+		//'plugin:new-with-error', //FIXME: Cant make this work ?? Why ??
 	],
 	parserOptions: {
 		ecmaVersion: 2017,
