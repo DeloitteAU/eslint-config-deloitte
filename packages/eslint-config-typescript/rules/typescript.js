@@ -6,9 +6,9 @@ module.exports = {
 				/**
 				 * 1. Disable things that are checked by Typescript
 				 */
-		  		//Checked by Typescript - ts(2378)
+				//Checked by Typescript - ts(2378)
 				'getter-return': 'off',
-		  		// Checked by Typescript - ts(2300)
+				// Checked by Typescript - ts(2300)
 				'no-dupe-args': 'off',
 				// Checked by Typescript - ts(1117)
 				'no-dupe-keys': 'off',

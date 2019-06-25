@@ -4,6 +4,7 @@
 
 - Enforce `async () => {}` instead of `async() => {}`.
 - Added `eslint-plugin-you-dont-need-lodash-underscore` plugin
+- Added `eslint-plugin-new-with-error` plugin
 - Allow JSX in `.tsx` files
 - Added a TypeScript config
 - Migrated this mono repo from npm to yarn

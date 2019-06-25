@@ -5,7 +5,7 @@ module.exports = {
 		'./rules/imports',
 	].map(require.resolve),
 	plugins: [
-		//require('eslint-plugin-you-dont-need-lodash-underscore').default,
+		'eslint-plugin-you-dont-need-lodash-underscore',
 		'eslint-plugin-new-with-error',
 	],
 	parserOptions: {
