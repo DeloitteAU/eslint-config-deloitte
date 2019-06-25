@@ -4,6 +4,10 @@ module.exports = {
 		'./rules/es6',
 		'./rules/imports',
 	].map(require.resolve),
+	plugins: [
+		//require('eslint-plugin-you-dont-need-lodash-underscore').default,
+		'eslint-plugin-new-with-error',
+	],
 	parserOptions: {
 		ecmaVersion: 2017,
 		sourceType: 'module',

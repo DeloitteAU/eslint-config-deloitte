@@ -1,8 +1,13 @@
 {
   "name": "@deloitte-digital-au/eslint-config-publisher",
   "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ]
+  },
   "devDependencies": {
-    "lerna": "^2.9.0"
+    "lerna": "^3.15.0"
   },
   "repository": {
     "type": "git",
@@ -13,7 +18,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "publish": "lerna publish",
-    "test": "lerna run test"
+    "test": "lerna run test --stream"
   },
   "bugs": {
     "url": "https://github.com/DeloitteDigitalAPAC/eslint-config-deloitte/issues"

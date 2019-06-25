@@ -4,4 +4,12 @@ module.exports = {
 		'./rules/react',
 		'./rules/jsx-a11y',
 	].map(require.resolve),
+	overrides: {
+		{
+			"files": ["**/*.tsx"],
+			"rules": {
+				"react/prop-types": "off"
+			}
+		}
+	}
 };
