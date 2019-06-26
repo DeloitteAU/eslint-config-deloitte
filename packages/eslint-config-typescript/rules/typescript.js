@@ -1,12 +1,10 @@
-import _ from 'lodash';
-
 module.exports = {
 	overrides: [
 		{
 			files: ['*.ts', '*.tsx'],
 			rules: {
 				/**
-				 * 1. Disable things that are checked by Typescript
+				 *  Disable things that are checked by Typescript
 				 */
 				//Checked by Typescript - ts(2378)
 				'getter-return': 'off',
