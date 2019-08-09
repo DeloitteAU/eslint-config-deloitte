@@ -37,6 +37,14 @@ module.exports = {
 				// The spread operator/rest parameters should be prefered in Typescript.
 				'prefer-rest-params': 'error',
 				'prefer-spread': 'error',
+				// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md
+				'no-explicit-any': 'error',
+				// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-assertion.md
+				'no-non-null-assertion': 'error',
+				// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-interface.md
+				'no-empty-interface': 'error',
+				// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md
+				'explicit-function-return-type': 'error',
 			},
 		},
 	],
