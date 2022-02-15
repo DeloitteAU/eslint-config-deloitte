@@ -1,6 +1,6 @@
 ## Changelog for Deloitte Digital's ESLint Config
 
-### [UNPUBLISHED]
+### [3.4.1]
 
 - Enforce `async () => {}` instead of `async() => {}`.
 - Added `eslint-plugin-you-dont-need-lodash-underscore` plugin
@@ -8,7 +8,9 @@
 - Allow JSX in `.tsx` files
 - Added a TypeScript config
 - Migrated this mono repo from npm to yarn
-
+- Update node version in .travis.yml
+- Bump ajv from 6.10.0 to 6.12.6 by @dependabot in #39
+ 
 ### [3.4.0]
 
 - Packages are now scoped to `@deloitte-digital-au`
