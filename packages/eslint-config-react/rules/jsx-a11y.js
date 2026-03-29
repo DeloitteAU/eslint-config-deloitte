@@ -11,10 +11,6 @@ module.exports = {
 	},
 
 	rules: {
-		// Enforce emojis are wrapped in and provide screenreader access
-		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/accessible-emoji.md
-		'jsx-a11y/accessible-emoji': 'error',
-
 		// Enforce all elements that require alternative text have meaningful information to relay back to end user
 		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/alt-text.md
 		'jsx-a11y/alt-text': 'error',
@@ -127,10 +123,6 @@ module.exports = {
 			roles: ['tabpanel'],
 		}],
 
-		// Enforce usage of onBlur over onChange on select menus for accessibility
-		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-onchange.md
-		'jsx-a11y/no-onchange': 'warn',
-
 		// Enforce explicit role property is not the same as implicit/default role property on element
 		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-redundant-roles.md
 		'jsx-a11y/no-redundant-roles': 'error',
@@ -164,9 +156,9 @@ module.exports = {
 		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/tabindex-no-positive.md
 		'jsx-a11y/tabindex-no-positive': 'off',
 
-		// Warning if missing htmlFor attribute
-		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-for.md
-		'jsx-a11y/label-has-for': ['warn', { components: ['label'], allowChildren: true }],
+		// Enforce that label elements have an associated control
+		// https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/label-has-associated-control.md
+		'jsx-a11y/label-has-associated-control': ['warn', { components: ['label'], assert: 'either' }],
 
 		// ensure anchor tags are valid and favour buttons
 		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md

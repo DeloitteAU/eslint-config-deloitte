@@ -1,5 +1,43 @@
 ## Changelog for Deloitte Digital's ESLint Config
 
+### [4.0.0]
+
+#### Security
+
+- Upgraded ESLint from v6 to v8 and all plugins to their latest compatible versions to resolve Critical and High Snyk vulnerabilities (flatted, lodash, minimatch, cross-spawn, semver, ansi-regex, acorn, eslint-utils, brace-expansion, ajv)
+- Added Yarn resolutions to pin transitive dependencies to safe versions
+
+#### Breaking Changes
+
+- **Minimum Node.js version is now 18** (was 10). ESLint 8 requires Node >=12.22; we target 18 LTS.
+- **`jsx-a11y/accessible-emoji`** rule removed (deprecated — emoji handling is now built into the ARIA spec)
+- **`jsx-a11y/no-onchange`** rule removed (deprecated — browsers fixed the underlying issue)
+- **`jsx-a11y/label-has-for`** rule replaced with **`jsx-a11y/label-has-associated-control`** (same intent, updated API)
+
+#### Changed
+
+- `import/imports-first` renamed to `import/first` (deprecated alias updated)
+- Removed deprecated `experimentalObjectRestSpread` and obsolete `ecmaFeatures` parser options
+- `eslint-plugin-new-with-error` bumped to ^5.0.0 (ESLint 8 compatible)
+
+#### Dependency Upgrades
+
+| Package | From | To |
+|---------|------|----|
+| eslint | ^6.0.1 | ^8.56.0 |
+| eslint-plugin-import | ^2.18.0 | ^2.29.0 |
+| eslint-plugin-you-dont-need-lodash-underscore | ^6.5.0 | ^6.14.0 |
+| eslint-plugin-new-with-error | ^2.0.0 | ^5.0.0 |
+| @typescript-eslint/eslint-plugin | ^1.9.0 | ^5.62.0 |
+| @typescript-eslint/parser | ^1.9.0 | ^5.62.0 |
+| eslint-plugin-jsx-a11y | ^6.2.1 | ^6.8.0 |
+| eslint-plugin-react | ^7.14.2 | ^7.34.0 |
+
+#### Note
+
+- Formatting rules (semi, quotes, indent, etc.) are deprecated in ESLint 8 but remain fully functional. For new projects, consider [@stylistic/eslint-plugin](https://eslint.style/).
+- This config still uses `.eslintrc.js` format (not ESLint 9 flat config).
+
 ### [3.4.1]
 
 - Enforce `async () => {}` instead of `async() => {}`.
