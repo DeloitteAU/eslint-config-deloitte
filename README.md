@@ -5,6 +5,14 @@
 
 These packages provides Deloitte Digital's code standards as an ESLint extensible config.
 
+## Requirements
+
+- **Node.js >= 18**
+- **ESLint 8.x** (included as a dependency — no need to install separately)
+- Config format: `.eslintrc.js` (CommonJS `module.exports`) — ESLint 9 flat config is not supported
+
+> **Upgrading from v3?** See [MIGRATION.md](MIGRATION.md) for a step-by-step guide.
+
 - [Installation for ECMAScript 6+ projects](#installation-for-ecmascript-6-projects)
 - [Installation for ECMAScript 6+ and React projects](#installation-for-ecmascript-6-and-react-projects)
 - [Installation for Legacy ES5 projects](#installation-for-legacy-es5-projects)
@@ -76,9 +84,11 @@ module.exports = {
 
 If you are using Types such as [Flow](https://github.com/facebook/flow) or experimental features not supported in ESLint itself yet such as decorators.
 
-Add `"parser": "babel-eslint"` to your `.eslintrc.js` file. Then `npm install babel-eslint --save-dev`
+Add `"parser": "@babel/eslint-parser"` to your `.eslintrc.js` file. Then `npm install @babel/eslint-parser --save-dev`
 
 Read more about configuring this package [here](https://github.com/babel/babel-eslint).
+
+> **Note:** `babel-eslint` has been deprecated in favour of `@babel/eslint-parser`.
 
 ## Who is Deloitte Digital?
 

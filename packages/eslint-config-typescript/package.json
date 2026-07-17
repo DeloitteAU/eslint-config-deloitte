@@ -1,6 +1,6 @@
 {
   "name": "@deloitte-digital-au/eslint-config-typescript",
-  "version": "3.4.2",
+  "version": "4.0.0",
   "description": "This package provides Deloitte Digital's code standards as an ESLint extensible config",
   "main": "./index.js",
   "scripts": {
@@ -21,15 +21,15 @@
     "typescript"
   ],
   "engines": {
-    "node": ">= 10"
+    "node": ">= 18"
   },
   "author": "Deloitte Digital Australia (http://deloittedigital.com.au)",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "@deloitte-digital-au/eslint-config": "^3.4.2",
-    "@typescript-eslint/eslint-plugin": "^1.9.0",
-    "@typescript-eslint/parser": "^1.9.0",
-    "eslint": "^6.0.1"
+    "@deloitte-digital-au/eslint-config": "^4.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint": "^8.56.0"
   },
   "publishConfig": {
     "access": "public"
